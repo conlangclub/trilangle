@@ -23,20 +23,19 @@ class TrilangleSentence extends HTMLElement {
     let tokensJSON = this.querySelector("template").innerHTML;
     let tokens = JSON.parse(tokensJSON);
 
-    let {width, height} = this.dataset;
+    let {width, height, viewbox} = this.dataset;
 
-    this.append(renderSentence(tokens, width, height));
+    this.append(renderSentence(tokens, width, height, viewbox));
   }
 }
 
 customElements.define("trilangle-sentence", TrilangleSentence);
-console.log("asdfasdf");
 
-
-function renderSentence(tokens, width, height) { 
+function renderSentence(tokens, width, height, viewbox) { 
   let container = d3.create("svg")
     .attr("width", width)
     .attr("height", height)
+    .attr("viewBox", viewbox)
   
   container.selectAll("g")
     .data(tokens.map(d => {
@@ -44,6 +43,8 @@ function renderSentence(tokens, width, height) {
       // storing the values here reduces redundancy
       // e.g. if we need to call the same function for
       // the values of two separate SVG attributes x and y
+      d.level = d.level ?? 0;
+      d.polarity = d.polarity ?? "pos";
       return {
         ...d,
         _vertices: tokenToVertices({...d, level: d.level + .3}, SCALE_FACTOR, OFFSET),
@@ -64,6 +65,9 @@ function renderSentence(tokens, width, height) {
           })
           .style("stroke", d => d.color)
           .style("stroke-width", 1.5)
+          .style("stroke-dasharray", d => {
+            return {pos: "none", unk: 10, neg: 2}[d.polarity]
+          })
         
         g.append("text")
           .text(d => d.word)

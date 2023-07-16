@@ -1,0 +1,134 @@
+---
+title: The Blues - Trilangle Guide
+layout: default
+description: A more-in depth guide to how Blues work in Trilangle.
+---
+
+<main class="guide container">
+  <h2>The Blues</h2>
+  <p class="lead mb-0">
+    This page goes into more depth on how Blues work and how they can take subject and objects.
+  </p>
+  <nav class="mb-3"><a href="/guide/index.html">← Back to guide index</a></nav>
+
+  <section>
+    <h3>Review</h3>
+    <p class="lead">Recall that Blues have two sides where it can accept donations. So far we've seen this used to make a variable the subject of a sentence when a Red touches the <em>bottom</em> edge of the Blue.</p>
+
+    <figure class="trilangle-gloss">
+      <div class="trilangle">
+        <trilangle-sentence data-width="200" data-height="200">
+          <template>
+            [
+              {"word": "sleep", "color": "blue", "dot": 0, "triangles": [[0,0,1]]},
+              {"word": "cat", "color": "red", "triangles": [[0,1,0]]}
+            ]
+          </template>
+        </trilangle-sentence>
+      </div>
+      <div>
+        <dl>
+          <dt>Idiomatic translation</dt>
+          <dd>A cat is sleeping.</dd>
+
+          <dt>Literal translation</dt>
+          <dd>There exists a thing x such that x is a cat, and there exists an event e such that e is an event of x sleeping.</dd>
+
+          <dt>Formal semantics</dt>
+          <dd>∃x cat(x) & ∃e sleep(e, x)</dd>
+        </dl>
+      </div>
+    </figure>
+
+    <p class="lead">This is because the Red donates is variable on all sides, and is attached to the Blue on an edge where the Blue can accept donations.</p>
+
+    <figure class="text-center">
+      <img src="/assets/images/red-arrow.svg" class="px-3">
+      <img src="/assets/images/blue-arrow.svg" class="px-3">
+      <img src="/assets/images/red-blue-arrow.svg" class="px-3">
+    </figure>
+  </section>
+
+  <section>
+    <h3>Subjects and objects</h3>
+    <p class="lead">The two inputs to the Blue are actually slightly different from each other: whatever the <strong>bottom</strong> edge receives becomes the subject of its predicate, and whatever the <strong>right</strong> edge receives becomes the object.</p>
+
+    <figure class="text-center">
+      <img src="/assets/images/blue-arrow-labels.svg" class="px-3">
+    </figure>
+
+    <p class="lead">Given this, we can now talk about events involving multiple entities by using both edges.</p>
+
+    <figure class="trilangle-gloss">
+      <div class="trilangle">
+        <trilangle-sentence data-width="200" data-height="200">
+          <template>
+            [
+              {"word": "monkey", "color": "red", "triangles": [[0,1,0]]},
+              {"word": "see", "color": "blue", "dot": 0, "triangles": [[0,0,1]]},
+              {"word": "action", "color": "red", "triangles": [[1,0,0]]}
+            ]
+          </template>
+        </trilangle-sentence>
+      </div>
+      <div>
+        <dl>
+          <dt>Idiomatic translation</dt>
+          <dd><a href="/assets/images/monkey-sees-action.jpg">Monkey sees action.</a></dd>
+
+          <dt>Literal translation</dt>
+          <dd>
+            There exists a thing x such that x is a monkey,<br>
+            and there exists a thing y such that y is an action<br>
+            and there exists an event e such that e is an event of x seeing y.
+          </dd>
+
+          <dt>Formal semantics</dt>
+          <dd>∃x monkey(x) & ∃y action(y) & ∃e see(e, x, y)</dd>
+        </dl>
+      </div>
+    </figure>
+
+    <p>In the figure above, the event <i>see</i> takes its subject, <i>monkey</i>, from its bottom <em>and</em> it takes its object, <em>action</em>, from its right. Similarly, the formal semantic representation has a final third argument, y, which is the object.</p>
+  </section>
+
+  <section>
+    <h3>Passive constructions</h3>
+    <p class="lead">You can make a passive sentence <span class="text-muted">(e.g. "a banana is eaten")</span> by omitting the triangle in the subject position of a Blue.</p>
+
+    <figure class="trilangle-gloss">
+      <div class="trilangle">
+        <trilangle-sentence data-width="200" data-height="100">
+          <template>
+            [
+              {"word": "eat", "color": "blue", "dot": 0, "triangles": [[0,0,1]]},
+              {"word": "banana", "color": "red", "triangles": [[1,0,0]]}
+            ]
+          </template>
+        </trilangle-sentence>
+      </div>
+      <div>
+        <dl>
+          <dt>Idiomatic translation</dt>
+          <dd>A banana is being eaten.</dd>
+
+          <dt>Literal translation</dt>
+          <dd>
+            There exists a thing x such that x is a banana,<br>
+            and there exists an event e such that e is an event of ⬚ eating y.
+          </dd>
+
+          <dt>Formal semantics</dt>
+          <dd>∃x monkey(x) & ∃y action(y) & ∃e see(e, ⬚, y)</dd>
+        </dl>
+      </div>
+    </figure>
+
+    <p>Note that in the formal representation, since the second argument of a predicate involving an event is always the subject, we have to explicitly state that the subject is undefined with a blank space (⬚).</p>
+
+  </section>
+
+  <nav class="paginator-bottom">
+    <a href="/guide/basics.html" class="prev">Prev page: The basics</a>
+  </nav>
+</main>

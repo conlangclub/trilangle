@@ -1,0 +1,15 @@
+.guide-basics {
+  @extend .container;
+
+  .polarity-fig {
+    display: flex;
+    justify-content: center;
+
+    >div {
+      @extend .px-3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

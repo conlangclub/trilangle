@@ -2,7 +2,11 @@
 ---
 @import "bootstrap/bootstrap";
 @import "header";
+@import "guide";
+
 @import "pages/index";
+
+@import "pages/guide/basics";
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap');;
 

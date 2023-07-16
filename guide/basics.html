@@ -1,15 +1,15 @@
 ---
-title: The basics
+title: The basics - Trilangle Guide
 layout: default
 description: A quick introduction to Trilangle fundamentals needed to understand the rest of the grammar.
 ---
 
-<main class="container">
+<main class="guide guide-basics">
   <h2>The basics</h2>
   <p class="lead mb-0">
-    This page is a quick introduction to Trilangle fundamentals needed to understand the rest of the grammar.
+    This page is a quick introduction to Trilangle fundamentals needed to understand the rest of the grammar and make a simple sentence.
   </p>
-  <nav class="mb-3"><a href="/guide/index.html">← Back to reference grammar index</a></nav>
+  <nav class="mb-3"><a href="/guide/index.html">← Back to guide index</a></nav>
 
   <section>
     <h3>What do triangles do?</h3>
@@ -20,7 +20,7 @@ description: A quick introduction to Trilangle fundamentals needed to understand
         <trilangle-sentence data-width="200" data-height="100">
           <template>
             [
-              {"word": "cat", "color": "red", "level": 0, "triangles": [[0,0,1]]}
+              {"word": "cat", "color": "red", "triangles": [[0,0,1]]}
             ]
           </template>
         </trilangle-sentence>
@@ -48,8 +48,8 @@ description: A quick introduction to Trilangle fundamentals needed to understand
         <trilangle-sentence data-width="300" data-height="100">
           <template>
             [
-              {"word": "cat", "color": "red", "level": 0, "triangles": [[0,0,1]]},
-              {"word": "dog", "color": "red", "level": 0, "triangles": [[1,0,1]]}
+              {"word": "cat", "color": "red", "triangles": [[0,0,1]]},
+              {"word": "dog", "color": "red", "triangles": [[1,0,1]]}
             ]
           </template>
         </trilangle-sentence>
@@ -75,7 +75,7 @@ description: A quick introduction to Trilangle fundamentals needed to understand
         <trilangle-sentence data-width="200" data-height="100">
           <template>
             [
-              {"word": "sleep", "color": "blue", "level": 0, "dot": 0, "triangles": [[0,0,1]]}
+              {"word": "sleep", "color": "blue", "dot": 0, "triangles": [[0,0,1]]}
             ]
           </template>
         </trilangle-sentence>
@@ -96,6 +96,37 @@ description: A quick introduction to Trilangle fundamentals needed to understand
   </section>
 
   <section>
+    <h3>Polarity</h3>
+    <p class="lead">In addition to existing, something can also <em>not</em> exist (negative polarity), or <em>maybe</em> exist (unknown polarity). We represent this by drawing the triangle with dashed lines for unknown polarity, and dotted lines for negative.</p>
+
+    <figure class="polarity-fig">
+      <div>
+        <trilangle-sentence data-width="100" data-height="100" data-viewbox="50 0 100 100">
+          <template>[{"word": "spoon", "color": "red", "triangles": [[0,0,1]]}]</template>
+        </trilangle-sentence>
+        <span>There is a spoon</span>
+        <span>∃x spoon(x)</span>
+      </div>
+      
+      <div>
+        <trilangle-sentence data-width="100" data-height="100" data-viewbox="50 0 100 100">
+          <template>[{"word": "spoon", "color": "red", "polarity": "unk", "triangles": [[0,0,1]]}]</template>
+        </trilangle-sentence>
+        <span>There might be a spoon</span>
+        <span>?∃x spoon(x)</span>
+      </div>
+      
+      <div>
+        <trilangle-sentence data-width="100" data-height="100" data-viewbox="50 0 100 100">
+          <template>[{"word": "spoon", "color": "red", "polarity": "neg", "triangles": [[0,0,1]]}]</template>
+        </trilangle-sentence>
+        <span>There is no spoon</span>
+        <span>!∃x spoon(x)</span>
+      </div>
+    </figure>
+  </section>
+
+  <section>
     <h3>Donating and recieving variables</h3>
 
     <p class="lead">Triangles can donate their variable to adjacent triangles. A triangle that accepts the donated variable uses as an argument to its predicate.</p>
@@ -105,8 +136,8 @@ description: A quick introduction to Trilangle fundamentals needed to understand
         <trilangle-sentence data-width="200" data-height="200">
           <template>
             [
-              {"word": "sleep", "color": "blue", "level": 0, "dot": 0, "triangles": [[0,0,1]]},
-              {"word": "cat", "color": "red", "level": 0, "triangles": [[0,1,0]]}
+              {"word": "sleep", "color": "blue", "dot": 0, "triangles": [[0,0,1]]},
+              {"word": "cat", "color": "red", "triangles": [[0,1,0]]}
             ]
           </template>
         </trilangle-sentence>
@@ -153,6 +184,9 @@ description: A quick introduction to Trilangle fundamentals needed to understand
     <figure class="text-center">
       <img src="/assets/images/red-red-arrow.svg" class="px-3">
     </figure>
-
   </section>
+
+  <nav class="paginator-bottom">
+    <a href="/guide/blues.html" class="next">Next page: The Blues</a>
+  </nav>
 </main>

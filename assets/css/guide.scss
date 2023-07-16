@@ -1,0 +1,21 @@
+.guide {
+  .paginator-bottom {
+    @extend .pb-3;
+
+    text-align: center;
+
+    a {
+      @extend .px-3;
+    }
+
+    .next {
+      @extend .btn;
+      @extend .btn-primary;
+    }
+
+    .prev {
+      @extend .btn;
+      @extend .btn-outline-primary;
+    }
+  }
+}
