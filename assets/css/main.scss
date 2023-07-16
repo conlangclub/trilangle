@@ -1,0 +1,73 @@
+---
+---
+@import "bootstrap/bootstrap";
+@import "header";
+@import "pages/index";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap');;
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+h3 {
+  @extend .border-bottom;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.lead {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+}
+
+.btn {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 95%;
+}
+
+main > section {
+  @extend .mb-5;
+}
+
+.fig-float-end {
+  @extend .float-lg-end;
+
+  display: flex;
+  justify-content: center;
+  background-color: $body-bg;
+
+  >img, trilangle-sentence {
+      @extend .p-3;
+      @extend .ms-3;
+  }
+}
+
+.trilangle-gloss {
+  @extend .row;
+
+  align-items: center;
+  justify-content: center;
+
+  >div {
+    @extend .col;
+  }
+
+  .trilangle {
+    @extend .justify-content-sm-end;
+    justify-content: center;
+
+    display: flex;
+  }
+}

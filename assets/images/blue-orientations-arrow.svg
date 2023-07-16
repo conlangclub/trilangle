@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="116.88324mm"
+   height="30.948263mm"
+   viewBox="0 0 116.88324 30.948263"
+   version="1.1"
+   id="svg49779"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="blue-orientations-arrow.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview49781"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.6819304"
+     inkscape:cx="193.23035"
+     inkscape:cy="31.808688"
+     inkscape:window-width="1920"
+     inkscape:window-height="1042"
+     inkscape:window-x="1080"
+     inkscape:window-y="38"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs49776" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-41.004424,-165.52962)">
+    <polygon
+       points="100,3.3599 147.0901,84.92 52.9099,84.92 "
+       style="fill:#0000ff;fill-opacity:0.101961;stroke:#0000ff;stroke-width:1.5px"
+       id="polygon10702"
+       transform="matrix(0.26458333,0,0,0.26458333,29.524332,165.08187)" />
+    <text
+       x="55.988308"
+       y="180.35715"
+       text-anchor="middle"
+       dominant-baseline="middle"
+       style="font-size:3.52777778px;fill:#0000ff;stroke-width:0.264583"
+       font-family="sans-serif"
+       font-size="2.54px"
+       id="text10704">sleep</text>
+    <circle
+       cx="55.982666"
+       cy="171.00841"
+       r="0.79374999"
+       style="fill:#0000ff;stroke-width:0.264583"
+       id="circle10706" />
+    <g
+       aria-label="↑"
+       id="text7760"
+       style="font-size:9.87777px;line-height:1.25;-inkscape-font-specification:sans-serif;letter-spacing:0px;fill:#999999;stroke-width:0.264583">
+      <path
+         d="m 55.770448,189.24319 h 0.434082 l 1.890667,1.90032 -0.578776,0.57877 -1.118966,-1.12861 v 5.88422 h -0.819932 v -5.88422 l -1.128613,1.12861 -0.578775,-0.57877 z"
+         id="path1076" />
+    </g>
+    <g
+       aria-label="↑"
+       transform="rotate(-120)"
+       id="text7896"
+       style="font-size:9.87777px;line-height:1.25;-inkscape-font-specification:sans-serif;letter-spacing:0px;fill:#999999;stroke-width:0.264583">
+      <path
+         d="m -184.39723,-32.810102 h 0.43408 l 1.89067,1.900313 -0.57878,0.578776 -1.11896,-1.128613 v 5.884219 h -0.81994 v -5.884219 l -1.12861,1.128613 -0.57877,-0.578776 z"
+         id="path1079" />
+    </g>
+    <g
+       aria-label="↓"
+       transform="rotate(120.28902)"
+       id="text7929"
+       style="font-size:9.87777px;line-height:1.25;-inkscape-font-specification:sans-serif;letter-spacing:0px;fill:#999999;stroke-width:0.264583">
+      <path
+         d="m 127.65056,-123.15121 h -0.43408 l -1.90032,-1.90031 0.57878,-0.57877 1.12861,1.12861 v -5.88422 h 0.81993 v 5.88422 l 1.11897,-1.12861 0.57878,0.57877 z"
+         id="path1073" />
+    </g>
+    <polygon
+       points="147.0901,84.92 52.9099,84.92 100,3.3599 "
+       style="fill:#0000ff;fill-opacity:0.101961;stroke:#0000ff;stroke-width:1.5px"
+       id="polygon51053"
+       transform="matrix(-0.13229166,0.22913589,-0.22913589,-0.13229166,125.90394,165.08117)" />
+    <text
+       x="99.451553"
+       y="180.13367"
+       text-anchor="middle"
+       dominant-baseline="middle"
+       style="font-size:3.52777778px;fill:#0000ff;stroke-width:0.264583"
+       font-family="sans-serif"
+       font-size="2.54px"
+       id="text51055">sleep</text>
+    <circle
+       cx="106.47086"
+       cy="-185.65005"
+       r="0.79374999"
+       style="fill:#0000ff;stroke-width:0.264583"
+       id="circle51057"
+       transform="rotate(120)" />
+    <g
+       aria-label="↑"
+       transform="rotate(120)"
+       id="text51061"
+       style="font-size:9.87777px;line-height:1.25;-inkscape-font-specification:sans-serif;letter-spacing:0px;fill:#999999;stroke-width:0.264583">
+      <path
+         d="m 106.25865,-167.41527 h 0.43408 l 1.89066,1.90032 -0.57877,0.57877 -1.11897,-1.12861 v 5.88422 h -0.81993 v -5.88422 l -1.12861,1.12861 -0.57878,-0.57877 z"
+         id="path1082" />
+    </g>
+    <g
+       aria-label="↑"
+       id="text51065"
+       style="font-size:9.87777px;line-height:1.25;-inkscape-font-specification:sans-serif;letter-spacing:0px;fill:#999999;stroke-width:0.264583">
+      <path
+         d="m 99.233972,189.24319 h 0.434081 l 1.890667,1.90032 -0.57878,0.57877 -1.118961,-1.12861 v 5.88422 h -0.819932 v -5.88422 l -1.128613,1.12861 -0.578775,-0.57877 z"
+         id="path1085" />
+    </g>
+    <g
+       aria-label="↓"
+       transform="rotate(-119.71098)"
+       id="text51069"
+       style="font-size:9.87777px;line-height:1.25;-inkscape-font-specification:sans-serif;letter-spacing:0px;fill:#999999;stroke-width:0.264583">
+      <path
+         d="m -205.78557,13.137647 h -0.43408 l -1.90031,-1.900314 0.57877,-0.578775 1.12862,1.128612 V 5.9029515 h 0.81993 V 11.78717 l 1.11896,-1.128612 0.57878,0.578775 z"
+         id="path1088" />
+    </g>
+    <g
+       aria-label="↑"
+       transform="rotate(120)"
+       id="text51108"
+       style="font-size:9.87777px;line-height:1.25;-inkscape-font-specification:sans-serif;letter-spacing:0px;fill:#999999;stroke-width:0.264583">
+      <path
+         d="m 84.508493,-204.99991 h 0.434081 l 1.890667,1.90032 -0.578775,0.57877 -1.118966,-1.12861 v 5.88422 h -0.819933 v -5.88422 l -1.128612,1.12861 -0.578776,-0.57877 z"
+         id="path1091" />
+    </g>
+    <polygon
+       points="100,3.3599 147.0901,84.92 52.9099,84.92 "
+       style="fill:#0000ff;fill-opacity:0.101961;stroke:#0000ff;stroke-width:1.5px"
+       id="polygon51096"
+       transform="matrix(-0.13229166,-0.22913589,0.22913589,-0.13229166,142.87081,210.86433)" />
+    <text
+       x="142.87616"
+       y="180.09843"
+       text-anchor="middle"
+       dominant-baseline="middle"
+       style="font-size:3.52777778px;fill:#0000ff;stroke-width:0.264583"
+       font-family="sans-serif"
+       font-size="2.54px"
+       id="text51098">sleep</text>
+    <circle
+       cx="-227.59094"
+       cy="24.224123"
+       r="0.79374999"
+       style="fill:#0000ff;stroke-width:0.264583"
+       id="circle51100"
+       transform="rotate(-120)" />
+    <g
+       aria-label="↑"
+       transform="rotate(-120)"
+       id="text51104"
+       style="font-size:9.87777px;line-height:1.25;-inkscape-font-specification:sans-serif;letter-spacing:0px;fill:#999999;stroke-width:0.264583">
+      <path
+         d="m -227.80316,42.458912 h 0.43408 l 1.89067,1.900313 -0.57878,0.578776 -1.11896,-1.128612 v 5.884218 h -0.81994 v -5.884218 l -1.12861,1.128612 -0.57877,-0.578776 z"
+         id="path1097" />
+    </g>
+    <g
+       aria-label="↓"
+       transform="rotate(0.28902)"
+       id="text51112"
+       style="font-size:9.87777px;line-height:1.25;-inkscape-font-specification:sans-serif;letter-spacing:0px;fill:#999999;stroke-width:0.264583">
+      <path
+         d="m 143.92728,195.74482 h -0.43408 l -1.90032,-1.90031 0.57878,-0.57878 1.12861,1.12862 v -5.88422 h 0.81993 v 5.88422 l 1.11897,-1.12862 0.57877,0.57878 z"
+         id="path1094" />
+    </g>
+  </g>
+</svg>

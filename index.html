@@ -1,0 +1,62 @@
+---
+title: Home
+layout: default
+description: Trilangle is a conlang written using colorful tessellating triangles, originally created as a project from the Conlang Club at UW.
+---
+<script type="module" src="/assets/js/render-trilangle.js"></script>
+
+<h2 class="invisible d-none">Home</h2>
+
+<main class="page-index">
+  <section>
+    <h3>Overview</h3>
+    <figure class="fig-float-end">
+      <trilangle-sentence data-width="200" data-height="360">
+        <template>
+          [
+            {"word": "artlang", "color": "blue", "level": 0, "dot": 0, "triangles": [[0,0,1]]},
+            {"word": "engineer", "color": "blue", "level": 0, "dot": 0, "triangles": [[-1,1,1]]},
+            {"word": "Trilangle", "color": "red", "level": 0, "triangles": [[0,1,0]]},
+            {"word": "write", "color": "blue", "level": 0, "dot": 2, "triangles": [[0,1,1]]},
+            {"word": "use", "color": "blue", "level": 0, "dot": 0, "triangles": [[1,2,0]]},
+            {"word": "triangle", "color": "red", "level": 0, "dot": 0, "triangles": [[0,2,1]]},
+            {"word": "colorful", "color": "blue", "level": 0, "dot": 1, "triangles": [[0,2,0]]},
+            {"word": "tesselate", "color": "blue", "level": 0, "dot": 0, "triangles": [[0,3,0]]}
+          ]
+        </template>
+      </trilangle-sentence>
+    </figure>
+    <p class="lead">Trilangle is an engineered artlang written using colorful tessellating triangles. The placement of triangles along a 2D plane determines the syntax of each sentence, with "verbs" that can mutually take each other as subjects and objects. Sentences can be parsed starting at any word in the sentence and still get the same meaning.</p>
+
+    <nav class="text-center mb-4">
+      <a href="/grammar/basics.html" class="btn btn-lg btn-primary">Start learning</a>
+      <a href="/grammar/index.html" class="btn btn-lg btn-outline-primary">Reference gammar</a>
+    </nav>
+
+    <p>Trilangle started as a project of the <a href="https://conlang.club">Conlang Club at UW</a> during Summer 2021 to experiment with conlangs utilizing shape and color. It has been developed by <a href="https://frederick.seattle.wa.us">Frederick</a> ever since, with a particular focus on the formal semantics of the language.</p>
+    <p>Trilangle doesn't have its own lexicon, so it borrows one from English. The lexicon can be exchanged for another language's, including Toki Pona.</p>
+  </section>
+
+  <section class="goals">
+    <h3>Goals</h3>
+    <section>
+      <h4>Use shape and color meaningfully</h4>
+      <p>The first version of Trilangle was created while trying to utilize color and shape in a conlang, so further versions of Trilangle should continue this spirit. The default written form of Trilangle should be colorful, with color and shape representing meaning. Since the name of the language is <i>Trilangle,</i> shapes should conform to a triangular grid.</p>
+    </section>
+
+    <section>
+      <h4>Writable with a 4-color pen, readable in monochrome</h4>
+      <p>The default, in-color writing system of Trilangle should be writable using a common Bic 4-color pen, specifically by only using red, green, blue, and black. For convenience, it should also be unambiguous in monochrome only, so it can be written with just a regular pen.</p>
+    </section>
+
+    <section>
+      <h4>Maximize parsimony</h4>
+      <p>Trilangle should be able to talk about complex things using a combination of simple rules. Exceptions for edge cases should be minimized so that the grammar is easy to remember. It really sucks when there's too many rules, and it's impossible to use or work on the language because you can't remember them.</p>
+    </section>
+
+    <section>
+      <h4>Have a formal semantics interpretation</h4>
+      <p>Semantics is cool and often overlooked in conlanging, and making a formal semantics representation of Trilangle is an interesting challenge. This is especially difficult if we want to be able to say all anything a natural language can, since Trilangle needs to balance logical consistency, expressiveness, and parsimony all while contrained to a 2D triangle grid.</p>
+    </section>
+  </section>
+</main>

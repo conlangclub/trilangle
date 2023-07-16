@@ -1,0 +1,9 @@
+name: Trilangle
+
+domain: trilangle.conlang.club
+url: https://trilangle.conlang.club
+baseurl: ""
+
+sass:
+    load_paths:
+        - assets/css

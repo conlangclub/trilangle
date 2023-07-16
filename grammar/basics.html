@@ -1,0 +1,158 @@
+---
+title: The basics
+layout: default
+description: A quick introduction to Trilangle fundamentals needed to understand the rest of the grammar.
+---
+
+<main class="container">
+  <h2>The basics</h2>
+  <p class="lead mb-0">
+    This page is a quick introduction to Trilangle fundamentals needed to understand the rest of the grammar.
+  </p>
+  <nav class="mb-3"><a href="/grammar/">← Back to reference grammar index</a></nav>
+
+  <section>
+    <h3>What do triangles do?</h3>
+    <p class="lead">Triangles assert existence, which are qualified by predicates. Red triangles ("Reds" for short) assert the existence of objects and entities.</p>
+
+    <figure class="trilangle-gloss">
+      <div class="trilangle">
+        <trilangle-sentence data-width="200" data-height="100">
+          <template>
+            [
+              {"word": "cat", "color": "red", "level": 0, "triangles": [[0,0,1]]}
+            ]
+          </template>
+        </trilangle-sentence>
+      </div>
+      <div>
+        <dl>
+          <dt>Idiomatic translation</dt>
+          <dd>"There is a cat."</dd>
+
+          <dt>Literal translation</dt>
+          <dd>There exists a thing x such that x is a cat.</dd>
+
+          <dt>Formal semantics</dt>
+          <dd>∃x cat(x)</dd>
+        </dl>
+      </div>
+    </figure>
+
+    <p>The red triangle above asserts the existence of an object-type variable x, and that x is a cat. You can think of the variable x as being like a subject in a sentence or clause, and the predicate in the triangle is, of course, the predicate. That means a single triangle can be an entire sentence on its own!</p>
+
+    <p>Note that the choice of variable name <span class="text-muted">(e.g. x, y, etc.)</span> is arbitrary, and two different triangles will assert the existence of two different variables.</p>
+
+    <figure class="trilangle-gloss">
+      <div class="trilangle">
+        <trilangle-sentence data-width="300" data-height="100">
+          <template>
+            [
+              {"word": "cat", "color": "red", "level": 0, "triangles": [[0,0,1]]},
+              {"word": "dog", "color": "red", "level": 0, "triangles": [[1,0,1]]}
+            ]
+          </template>
+        </trilangle-sentence>
+      </div>
+      <div>
+        <dl>
+          <dt>Idiomatic translation</dt>
+          <dd>"There is a cat and a dog."</dd>
+
+          <dt>Literal translation</dt>
+          <dd>There exists a thing x such that x is a cat, and there exists a thing y such that y is a dog.</dd>
+
+          <dt>Formal semantics</dt>
+          <dd>∃x cat(x) & ∃y dog(y)</dd>
+        </dl>
+      </div>
+    </figure>
+
+    <p class="lead">Blue triangles ("Blues" for short) assert the existence of events.</p>
+
+    <figure class="trilangle-gloss">
+      <div class="trilangle">
+        <trilangle-sentence data-width="200" data-height="100">
+          <template>
+            [
+              {"word": "sleep", "color": "blue", "level": 0, "dot": 0, "triangles": [[0,0,1]]}
+            ]
+          </template>
+        </trilangle-sentence>
+      </div>
+      <div>
+        <dl>
+          <dt>Idiomatic translation</dt>
+          <dd>"Sleep is happening." <span class="text-muted">(alternatively, "something is sleeping")</span></dd>
+
+          <dt>Literal translation</dt>
+          <dd>There exists an event e such that e is sleep.</dd>
+
+          <dt>Formal semantics</dt>
+          <dd>∃e sleep(e)</dd>
+        </dl>
+      </div>
+    </figure>
+  </section>
+
+  <section>
+    <h3>Donating and recieving variables</h3>
+
+    <p class="lead">Triangles can donate their variable to adjacent triangles. A triangle that accepts the donated variable uses as an argument to its predicate.</p>
+
+    <figure class="trilangle-gloss">
+      <div class="trilangle">
+        <trilangle-sentence data-width="200" data-height="200">
+          <template>
+            [
+              {"word": "sleep", "color": "blue", "level": 0, "dot": 0, "triangles": [[0,0,1]]},
+              {"word": "cat", "color": "red", "level": 0, "triangles": [[0,1,0]]}
+            ]
+          </template>
+        </trilangle-sentence>
+      </div>
+      <div>
+        <dl>
+          <dt>Idiomatic translation</dt>
+          <dd>A cat is sleeping.</dd>
+
+          <dt>Literal translation</dt>
+          <dd>There exists a thing x such that x is a cat, and there exists an event e such that e is an event of x sleeping.</dd>
+
+          <dt>Formal semantics</dt>
+          <dd>∃x cat(x) & ∃e sleep(e, x)</dd>
+        </dl>
+      </div>
+    </figure>
+
+    <p>Notice how the Red, when attached to the bottom of the Blue, donates its own variable x to the Blue. The Blue now uses x as an argument to sleep and becomes ∃e sleep(e, x) <i>("x is sleeping")</i> instead of just ∃e sleep(e) <i>("sleep is happening.")</i></p>
+
+    <p class="lead">Different color triangles donate and receive triangles differently. The Red donates its variable on all sides, but never accepts donations. Blues donate only on its left side, but accept donations from the bottom and right sides.</p>
+
+    <p>In the following figure, an outward arrow indicates that the triangle donates its variable from that side. An inward arrow indicates that the triangle accepts donations from that side.</p>
+
+    <figure class="text-center">
+      <img src="/assets/images/red-arrow.svg" class="px-3">
+      <img src="/assets/images/blue-arrow.svg" class="px-3">
+    </figure>
+
+    <p class="lead">Since orientation matters for Blues, a dot is used to mark the "top." If you rotate the Blue, the dot will move along with it, as will the edges that donate or accept donated variables.</p>
+
+    <figure class="text-center">
+      <img src="/assets/images/blue-orientations-arrow.svg" class="px-3">
+    </figure>
+
+    <p class="lead">With correct placement, Blues can use variables from Reds because Reds donate variables while Blues can accept them.</p>
+
+    <figure class="text-center">
+      <img src="/assets/images/red-blue-arrow.svg" class="px-3">
+    </figure>
+
+    <p class="lead">Two Reds will never use each others' variables even if they are adjacent, because the always give but never receive.</p>
+
+    <figure class="text-center">
+      <img src="/assets/images/red-red-arrow.svg" class="px-3">
+    </figure>
+
+  </section>
+</main>
