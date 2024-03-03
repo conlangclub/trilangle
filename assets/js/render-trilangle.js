@@ -23,19 +23,20 @@ class TrilangleSentence extends HTMLElement {
     let tokensJSON = this.querySelector("template").innerHTML;
     let tokens = JSON.parse(tokensJSON);
 
-    let {width, height, viewbox} = this.dataset;
+    let renderedSentence = renderSentence(tokens);
+    this.append(renderedSentence);
 
-    this.append(renderSentence(tokens, width, height, viewbox));
+    let bbox = renderedSentence.getBBox();
+    renderedSentence.setAttribute("width", bbox.x + bbox.width + bbox.x);
+    renderedSentence.setAttribute("height", bbox.y + bbox.height + bbox.y);
   }
 }
 
 customElements.define("trilangle-sentence", TrilangleSentence);
 
-function renderSentence(tokens, width, height, viewbox) { 
+function renderSentence(tokens) { 
   let container = d3.create("svg")
-    .attr("width", width)
-    .attr("height", height)
-    .attr("viewBox", viewbox)
+    .attr("viewBox")
   
   container.selectAll("g")
     .data(tokens.map(d => {
