@@ -36,7 +36,6 @@ customElements.define("trilangle-sentence", TrilangleSentence);
 
 function renderSentence(tokens) { 
   let container = d3.create("svg")
-    .attr("viewBox")
   
   container.selectAll("g")
     .data(tokens.map(d => {
