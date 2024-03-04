@@ -19,7 +19,9 @@ const CLIPPER_GLOBAL_SCALING = 10000;
 class TrilangleSentence extends HTMLElement {
   constructor() {
     super();
-
+  }
+  
+  connectedCallback() {
     let tokensJSON = this.querySelector("template").innerHTML;
     let tokens = JSON.parse(tokensJSON);
 
@@ -28,7 +30,7 @@ class TrilangleSentence extends HTMLElement {
 
     let bbox = renderedSentence.getBBox();
     renderedSentence.setAttribute("width", bbox.x + bbox.width + bbox.x);
-    renderedSentence.setAttribute("height", bbox.y + bbox.height + bbox.y);
+    renderedSentence.setAttribute("height", bbox.y + bbox.height + bbox.y);  
   }
 }
 
