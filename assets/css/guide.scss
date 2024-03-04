@@ -1,4 +1,16 @@
 .guide {
+  .polarity-fig {
+    display: flex;
+    justify-content: center;
+
+    >div {
+      @extend .px-3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
   .paginator-bottom {
     @extend .pb-3;
 

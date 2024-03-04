@@ -1,0 +1,121 @@
+---
+title: The Reds - Trilangle Guide
+layout: default
+description: A more-in depth guide to how Reds work in Trilangle
+---
+<main class="guide container">
+  <h2>The Reds</h2>
+  <p class="lead mb-0">
+    This page goes into more depth on how Reds work and how they can expand and contain other triangles.
+  </p>
+  <nav class="mb-3"><a href="/guide/index.html">← Back to guide index</a></nav>
+
+  <section>
+    <h3>Expansion</h3>
+    <p class="lead">Recall that Reds donate its variable on all sides.</p>
+
+    <figure class="text-center d-flex flex-column">
+      <div><img src="/assets/images/red-arrow.svg" class="px-3"></div>
+      <span>There is a cat</span>
+      <span>∃x cat(x)</span>
+    </figure>
+
+    <p class="lead">Since every side acts the same way, we can safely expand the Red to take up more space. Even when expanded, every side still donates the Red's variable to adjacent triangles.</p>
+
+    <p class="lead">The following reds all mean the same thing, even though they have been expanded in different ways.</p>
+
+    <figure class="polarity-fig">
+      <div>
+        <trilangle-sentence>
+          <template>[{"word": "cat", "color": "red", "triangles": [[0,0,1], [0,1,0]]}]</template>
+        </trilangle-sentence>
+      </div>
+      <div>
+        <trilangle-sentence>
+          <template>[{"word": "cat", "color": "red", "triangles": [[0,0,1], [1,0,0], [0,1,0]]}]</template>
+        </trilangle-sentence>
+      </div>
+      <div>
+        <trilangle-sentence>
+          <template>[{"word": "cat", "color": "red", "triangles": [[1,0,0], [0,0,1], [0,1,0],[1,0,1],[1,1,0]]}]</template>
+        </trilangle-sentence>
+      </div>
+    </figure>
+  </section>
+
+  <section>
+    <h3>Nesting</h3>
+    <p class="lead">If you expand a Red, you can nest more Reds inside of them. Anything nested inside a Red will be inside the scope of the parent quantifier, and any object asserted by Reds that are nested inside a parent are considered the same as the object that the parent Red asserts.</p>
+
+    <figure class="trilangle-gloss">
+      <div class="trilangle">
+        <trilangle-sentence>
+          <template>
+            [
+              {"word": "spoon", "color": "red", "level": 0, "triangles": [
+                [1,0,0],
+                [0,0,1]
+              ]},
+              {"word": "fork", "color": "red", "level": 1, "triangles": [[0,0,1]]}
+            ]
+          </template>
+        </trilangle-sentence>
+      </div>
+      <div>
+        <dl>
+          <dt>Idiomatic translation</dt>
+          <dd>There is a spoon that is also a fork.</dd>
+
+          <dt>Literal translation</dt>
+          <dd>There exists a thing x such that x is a spoon, and there exists a thing y such that y is a fork, and x is the same thing y.</dd>
+
+          <dt>Formal semantics</dt>
+          <dd>∃x ( spoon(x) & ( ∃y fork(y) ) & x = y)</dd>
+        </dl>
+      </div>
+    </figure>
+
+    <p class="lead">Variables asserted by non-Reds that are nested inside a Red are not equal to the parent's variable.</p>
+
+    <p>In the following figure, "ice" asserts an object <i>x</i> and "solid" asserts an event <i>e</i>. Even though "solid" is nested inside "ice," x ≠ e because "ice" is a different color.</p>
+
+    <figure class="trilangle-gloss">
+      <div class="trilangle">
+        <trilangle-sentence>
+          <template>
+            [
+              {"word": "ice", "color": "red", "level": 0, "triangles": [
+                [1,0,0],
+                [0,0,1],
+                [0,1,0]
+              ]},
+              {"word": "water", "color": "red", "level": 1, "triangles": [[0,0,1]]},
+              {"word": "solid", "color": "blue", "dot": 3, "level": 1, "triangles": [[0,1,0]]}
+            ]
+          </template>
+        </trilangle-sentence>
+      </div>
+      <div>
+        <dl>
+          <dt>Idiomatic translation</dt>
+          <dd>There is some ice that is also solid water.</dd>
+
+          <dt>Literal translation</dt>
+          <dd>
+            There exists a thing x such that x is ice,<br>
+            and there exists a thing y such that y is water,<br>
+            and there exists an event e such that e is an event of y being solid,<br>
+            and x is the same thing as y.
+          </dd>
+
+          <dt>Formal semantics</dt>
+          <dd>∃x ( ice(x) & ( ∃y water(y) & ∃e solid(e, y) ) & x = y)</dd>
+        </dl>
+      </div>
+    </figure>
+  </section>
+
+  <nav class="paginator-bottom">
+    <a href="/guide/blues.html" class="prev">Prev page: The Blues</a>
+  </nav>
+</main>
