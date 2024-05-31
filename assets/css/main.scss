@@ -69,7 +69,7 @@ main > section {
   }
 
   .trilangle {
-    @extend .justify-content-sm-end;
+    @extend .justify-content-sm-end; /* On wider screens, justify-center can make the Trilangle sentence really far away from the gloss */
     justify-content: center;
 
     display: flex;
