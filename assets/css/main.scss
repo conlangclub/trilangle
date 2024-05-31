@@ -69,7 +69,6 @@ main > section {
   }
 
   .trilangle {
-    @extend .justify-content-sm-end;
     justify-content: center;
 
     display: flex;
