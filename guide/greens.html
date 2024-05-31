@@ -1,0 +1,105 @@
+---
+title: The Greens - Trilangle Guide
+layout: default
+description: An introduction and guide to Greens in Trilangle.
+---
+<main class="guide container">
+  <h2>The Greens</h2>
+  <p class="lead mb-0">
+    This page introduces the Greens and how they can be used to talk about groups of objects.
+  </p>
+  <nav class="mb-3"><a href="/guide/index.html">← Back to guide index</a></nav>
+
+  <section>
+    <h3>Forming and using sets</h3>
+
+    <p class="lead">Greens assert the existence of sets and can donate and receive variables on all sides. Unlike Reds and Blues, the word inside the Green is <em>not</em> a predicate, but the name of the variable itself.</p>
+
+    <figure class="text-center d-flex flex-column">
+      <div><img src="/assets/images/green-arrow.svg" class="px-3"></div>
+      <span>There is a set S</span>
+      <span>∃S set(S)</span>
+    </figure>
+
+    <p>It's a bit cumbersome to always assert that S is a set, so from now on whenever we assert the existence of something using a capital letter <span class="muted">(like "S")</span>, we'll just assume it is a set instead of writing out "set(S)" all the time.</p>
+
+    <p class="lead">When a Green receives a variable, the variable becomes a member of its set.</p>
+
+    <figure class="trilangle-gloss">
+      <div class="trilangle">
+        <trilangle-sentence>
+          <template>
+            [
+              {"word": "S", "color": "green", "triangles": [[0,0,1]]},
+              {"word": "cat", "color": "red", "triangles": [[0,1,0]]},
+              {"word": "dog", "color": "red", "triangles": [[0,0,0]]} 
+            ]
+          </template>
+        </trilangle-sentence>
+      </div>
+      <div>
+        <dl>
+          <dt>Idiomatic translation</dt>
+          <dd>There is a set of a cat and a dog.</dd>
+
+          <dt>Literal translation</dt>
+          <dd>There exists a thing x such that x is a dog, and there exists a thing y such that y is a cat, and there exists a set S such that x and y are members of S.</dd>
+
+          <dt>Formal semantics</dt>
+          <dd>∃x dog(x) & ∃y cat(y) & ∃S x, y ∈ S</dd>
+        </dl>
+      </div>
+    </figure>
+
+    <p class="lead">When Greens donate its variable to a Blue, you can talk about something that applies to the entire set as a whole.</p>
+
+    <figure class="trilangle-gloss">
+      <div class="trilangle">
+        <trilangle-sentence>
+          <template>
+            [
+              {"word": "S", "color": "green", "triangles": [[0,0,1]]},
+              {"word": "cat", "color": "red", "triangles": [[0,1,0]]},
+              {"word": "dog", "color": "red", "triangles": [[0,0,0]]},
+              {"word": "play", "color": "blue", "dot": 2, "triangles": [[1,0,0]]}
+            ]
+          </template>
+        </trilangle-sentence>
+      </div>
+      <div>
+        <dl>
+          <dt>Idiomatic translation</dt>
+          <dd>The the cat and the dog are playing.</dd>
+
+          <dt>Literal translation</dt>
+          <dd>
+            There exists a thing x such that x is a dog,<br>
+            and there exists a thing y such that y is a cat,<br>
+            and there exists a set S such that x and y are members of S,<br>
+            and e is an event of S playing.
+          </dd>
+
+          <dt>Formal semantics</dt>
+          <dd>∃x dog(x) & ∃y cat(y) & ∃S x, y ∈ S & ∃e play(e, S)</dd>
+        </dl>
+      </div>
+    </figure>
+
+    <p>Note that in this sentence we are asserting the existence of a <em>single</em> event <i>e</i>, which both the cat and the dog are partaking in. If we want to assert that the cat and dog are both playing separately, we would need two Blues with the predicate "play" attached to the cat and dog Reds respectively.</p>
+  </section>
+
+  <section>
+    <h3>Indexing</h3>
+  </section>
+
+  <section>
+    <h3>Expansion</h3>
+
+    <p class="lead">Since Greens donate and receive its variable on every side, they can expand just like Reds.</p>
+  </section>
+
+  <nav class="paginator-bottom">
+    <a href="/guide/reds.html" class="prev">Prev page: The Reds</a>
+    <a href="/guide/greens.html" class="prev disabled">Next page: Adverbial Modification</a>
+  </nav>
+</main>
