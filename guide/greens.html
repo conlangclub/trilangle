@@ -23,7 +23,9 @@ description: An introduction and guide to Greens in Trilangle.
 
     <p>It's a bit cumbersome to always assert that S is a set, so from now on whenever we assert the existence of something using a capital letter <span class="muted">(like "S")</span>, we'll just assume it is a set instead of writing out "set(S)" all the time.</p>
 
-    <p class="lead">When a Green receives a variable, the variable becomes a member of its set.</p>
+    <p class="lead">When a Green receives a variable, it asserts that the variable it received is a subset of its own variable.</p>
+
+    <p>In other words, the region of spacetime the donated variable covers is contained within the region of spacetime of the Green's variable.</p>
 
     <figure class="trilangle-gloss">
       <div class="trilangle">
@@ -43,10 +45,10 @@ description: An introduction and guide to Greens in Trilangle.
           <dd>There is a set of a cat and a dog.</dd>
 
           <dt>Literal translation</dt>
-          <dd>There exists a thing x such that x is a dog, and there exists a thing y such that y is a cat, and there exists a set S such that x and y are members of S.</dd>
+          <dd>There exists a thing x such that x is a dog, and there exists a thing y such that y is a cat, and there exists a set S such that x and y are subsets of S.</dd>
 
           <dt>Formal semantics</dt>
-          <dd>∃x dog(x) & ∃y cat(y) & ∃S x, y ∈ S</dd>
+          <dd>∃x dog(x) & ∃y cat(y) & ∃S x, y ⊆ S</dd>
         </dl>
       </div>
     </figure>
@@ -75,12 +77,12 @@ description: An introduction and guide to Greens in Trilangle.
           <dd>
             There exists a thing x such that x is a dog,<br>
             and there exists a thing y such that y is a cat,<br>
-            and there exists a set S such that x and y are members of S,<br>
+            and there exists a set S such that x and y are subsets of S,<br>
             and e is an event of S playing.
           </dd>
 
           <dt>Formal semantics</dt>
-          <dd>∃x dog(x) & ∃y cat(y) & ∃S x, y ∈ S & ∃e play(e, S)</dd>
+          <dd>∃x dog(x) & ∃y cat(y) & ∃S x, y ⊆ S & ∃e play(e, S)</dd>
         </dl>
       </div>
     </figure>
@@ -111,7 +113,7 @@ description: An introduction and guide to Greens in Trilangle.
   </section>
 
   <nav class="paginator-bottom">
-    <a href="/guide/reds.html" class="prev">Prev page: The Reds</a>
+    <a href="/guide/objects-and-events.html" class="prev">Prev page: Objects and events</a>
     <a href="/guide/greens.html" class="prev disabled">Next page: Adverbial Modification</a>
   </nav>
 </main>
