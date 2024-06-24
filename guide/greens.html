@@ -104,12 +104,31 @@ description: An introduction and guide to Greens in Trilangle.
   <section>
     <h3>Expansion</h3>
 
-    <p class="lead">Since Greens donate and receive its variable on every side, they can expand just like Reds.</p>
+    <p class="lead">Since Greens donate and receive its variable on every side, they can expand just like Reds without changing their meaning.</p>
 
-    <div class="alert alert-warning">
-      <img src="/assets/images/under-construction.png" role="presentation">
-      This section is missing a diagram!
-    </div>
+    <figure class="text-center d-flex flex-column">
+      <div class="polarity-fig">
+        <div>
+          <trilangle-sentence>
+            <template>[{"word": "S", "color": "green", "triangles": [[0,0,1], [0,1,0]]}]</template>
+          </trilangle-sentence>
+        </div>
+        <div>
+          <trilangle-sentence>
+            <template>[{"word": "S", "color": "green", "triangles": [[0,0,1], [1,0,0], [0,1,0]]}]</template>
+          </trilangle-sentence>
+        </div>
+        <div>
+          <trilangle-sentence>
+            <template>[{"word": "S", "color": "green", "triangles": [[1,0,0], [0,0,1], [0,1,0],[1,0,1],[1,1,0]]}]</template>
+          </trilangle-sentence>
+        </div>
+      </div>
+      <div class="mt-3 d-flex flex-column">
+        <span>There is a set S</span>
+        <span>∃S set(S)</span>
+      </div>
+    </figure>
   </section>
 
   <nav class="paginator-bottom">
