@@ -49,7 +49,7 @@ description: The vocabulary extension is an a priori vocabulary created specific
         <td>ᒋ</td>
         <td>ᒍ</td>
         <td>ᒐ</td>
-        <td>ᒾ</td>
+        <td>ᐨ</td>
       </tr>
       <tr>
         <th scope="row">/m/-<sup>1</sup></th>
@@ -57,7 +57,7 @@ description: The vocabulary extension is an a priori vocabulary created specific
         <td>ᒥ</td>
         <td>ᒧ</td>
         <td>ᒪ</td>
-        <td>ᒼ</td>
+        <td>ᒾ</td>
       </tr>
       <tr>
         <th scope="row">/n/-</th>
@@ -99,11 +99,21 @@ description: The vocabulary extension is an a priori vocabulary created specific
         <td>ᗕ</td>
         <td>ᐤ</td>
       </tr>
+      <tr>
+        <th scope="row">/r/-</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>ᕑ</td>
+      </tr>
     </table>
 
     <small class="text-sm">
       <ol>
-        <li>The symbol for the coda /-m/ has been replaced by <a href="https://en.wiktionary.org/wiki/%E1%92%BE">Canadian Syllabics Athabascan M</a> for reasons described in the Phonosemantics section.</li>
+        <li>
+          The symbol for the coda /-m/ has been replaced by <a href="https://en.wiktionary.org/wiki/%E1%92%BE">Canadian Syllabics Athabascan M</a> for reasons described in the Morphology section.
+        </li>
         <li>
           The non-coda symbols are from the <a href="https://en.wikipedia.org/wiki/Carrier_syllabics">Carrier syllabary</a>. The vowels represented by orientation are different in Carrier; they have been changed for Trilangle to be more similar to the original Canadian syllabics.
         </li>
@@ -112,9 +122,55 @@ description: The vocabulary extension is an a priori vocabulary created specific
         </li>
       </ol>
     </small>
+
+    <p class="lead">
+      There are a small number of syllables used for logical symbols and functional morphemes that cannot exist in the lexicon:
+
+      <ul>
+        <li>ᓓ /le/ - Logical not</li>
+        <li>ᕈ /ro/ - Logical unknown</li>
+        <li>ᐱ /pi/ - Logical and</li>
+        <li>ᐯ /pe/ - Logical or</li>
+        <li>ᗄ /ɣu~gu/ - Universal quantifier "all"</li>
+        <li>ᗱ /ge/ - Existential quantifier "every"</li>
+        <li>＝ /θe/ - Equals</li>
+        <li>ᑕ /ta/ - Subset</li>
+      </ul>
+    </p>
+
   </section>
 
   <section>
-    <h3>Phonosemantics</h3>
+    <h3>Morphology</h3>
+
+    <section>
+      <h4>Variables</h4>
+      <p class="lead">Any word consisting of a monosyllable that would be allowed in a lexical item is a variable name.</p>
+      
+      <h4>Negation</h4>
+      <p class="lead">Lexical items may be prefixed with ᓓ /le/ to form its negation.</p>
+      <p>For example, given the word ᑯᐃ /koi/ <i>love</i>, when given this prefix becomes ᓓᑯᐃ /lekoi/ <i>not love</i>.</p>
+      <p>This symbol was chosen due to a resemblance to the logical not symbol (¬).</p>
+    </section>
+    
+    <section>
+      <h4>Unknowns</h4>
+      <p class="lead">Lexical items may be prefixed with ᕈ /ro/ to form its uncertain version.</p>
+      <p>For example, given the word ᑯᐃ /koi/ <i>love</i>, when given this prefix becomes ᕈᑯᐃ /rokoi/ <i>maybe love</i>.</p>
+      <p>This symbol was chosen due to a resemblance to the question mark (?).</p>
+    </section>
+
+    <section>
+      <h4>n-place predicates</h4>
+      <p class="lead">In the Trilangle vocabulary, the 1-place predicates never end with a consonant, while 2-place predicates always end with ᒾ /m/ and 3-place predicates with ᕑ /r/.</p>
+
+      <p>Each predicate may have other semantically related predicates with different numbers of arguments (arity). For example, the 1-place predicate "love(x)"" asserting <i>the concept of love</i> and the 3-place predicate "love(e, x, y)" asserting that there is an event of something loving something else.</p>
+
+      <p>For example, ᑯᐃ /koi/ <i>love</i> is 1-place and therefore does not end with a consonant, but the 3-place predicate ᑯᐃᕑ /koir/ <i>to love</i> ends with the consonant ᕑ /r/.</p>
+
+      <p>These symbols were chosen due to a resemblance to the arabic numerals 2 and 3.</p>
+
+      <p>Not every n-place predicate has counterparts with different arity.</p>
+    </section>
   </section>
 </main>
