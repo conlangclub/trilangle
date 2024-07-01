@@ -1,0 +1,79 @@
+---
+title: Example sentences
+layout: default
+---
+<main class="container">
+  <h2>Example sentences</h2>
+  <p class="lead">The following are some example sentences using Trilangle and its extensions.</p>
+
+  <section>
+    <article>
+      <h3>"Dupe's mother sun-dried the clothes"</h3>
+
+      <div class="row">
+        <figure class="text-center col">
+          <trilangle-sentence>
+            <template>
+              [
+                {"word": "ᗤᒣ", "color": "red", "level": 0, "dot": 0, "triangles": [[0,2,1]]},
+                {"word": "ᒪᒪ", "color": "blue", "level": 0, "dot": 0, "triangles": [[1,2,0]]},
+                {"word": "", "color": "red", "level": 0, "dot": 0, "triangles": [[0,1,1]]},
+                {"word": "ᒋᐣᗧ", "color": "blue", "level": 0, "dot": 2, "triangles": [[1,1,0]]},
+                {"word": "ᗢᔦ", "color": "red", "level": 0, "dot": 2, "triangles": [[1,1,1]]},
+                {"word": "ᓴᒧ", "color": "blue", "level": 0, "dot": 3, "triangles": [[1,0,1]]},
+                {"word": "ᐁᐨᗕ", "color": "red", "level": 0, "dot": 3, "triangles": [[2,0,0]]}
+              ]
+            </template>
+          </trilangle-sentence>
+          <trilangle-sentence>
+            <template>
+              [
+                {"word": "Dupe", "color": "red", "level": 0, "dot": 0, "triangles": [[0,2,1]]},
+                {"word": "mother", "color": "blue", "level": 0, "dot": 0, "triangles": [[1,2,0]]},
+                {"word": "", "color": "red", "level": 0, "dot": 0, "triangles": [[0,1,1]]},
+                {"word": "dry", "color": "blue", "level": 0, "dot": 2, "triangles": [[1,1,0]]},
+                {"word": "clothes", "color": "red", "level": 0, "dot": 2, "triangles": [[1,1,1]]},
+                {"word": "use", "color": "blue", "level": 0, "dot": 3, "triangles": [[1,0,1]]},
+                {"word": "sun", "color": "red", "level": 0, "dot": 3, "triangles": [[2,0,0]]}
+              ]
+            </template>
+          </trilangle-sentence>
+        </figure>
+        <section class="col">
+          <dl>
+            <dt>Extensions used</dt>
+            <dd>Vocabulary extension (first), None (second)</dd>
+
+            <dt>Idiomatic translation</dt>
+            <dd>Dupe's mother sun-dried the clothes.</dd>
+
+            <dt>Literal translation</dt>
+            <dd>
+              There exists a thing w such that w is Dupe<br>
+              and there exists an event e of x being w's mother<br>
+              and there exists a thing x<br>
+              and there exists an event f of x drying y<br>
+              and there exists a thing y that is clothes<br>
+              and there is an event g of f using z<br>
+              and there is a thing z such that z is a sun.
+            </dd>
+
+            <dt>Formal semantics</dt>
+            <dd>
+              ∃w Dupe(w)<br>
+              & ∃e mother(e, x, w)<br>
+              & ∃x<br>
+              & ∃f dry(e, x, y)<br>
+              & ∃y clothes(y)<br>
+              & ∃g use(g, f, z)<br>
+              & ∃z sun(z)
+            </dd>
+
+            <dt>Notes</dt>
+            <dd>This is the sentence used for the <a href="https://old.reddit.com/r/conlangs/comments/1dsj3yz/2068th_just_used_5_minutes_of_your_day/">2068th Just Used 5 Minutes of Your Day</a> on <a href="https://old.reddit.com/r/conlangs/">r/conlangs</a></dd>
+          </dl>
+        </section>
+      </div>
+    </article>
+  </section>
+</main>
