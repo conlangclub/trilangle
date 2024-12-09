@@ -16,8 +16,8 @@
   two: me(e, x); e is an event of x being me.
 
 - gloss: you
-  stem: i mi
-  one: me(x); x is you.
+  stem: i ja
+  one: you(x); x is you.
   two: me(e, x); e is an event of x being you.
 
 - gloss: greeting
@@ -54,4 +54,3 @@
   stem: tʼe je
   one: clothes(x); x is clothes.
   two: clothes(e, x); e is an event of x being clothes.
-  three: use(e, x, y); e is an event of x drying y.
