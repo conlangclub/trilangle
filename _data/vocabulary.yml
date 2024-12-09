@@ -24,7 +24,7 @@
   stem: i sa wo
   one: greeting(x); x is a greeting.
   two: greeting(e, x); e is an event of x being a greeting.
-  three: greet(e, x); e is an event of x greeting y.
+  three: greet(e, x, y); e is an event of x greeting y.
 
 - gloss: love
   stem: ko i
