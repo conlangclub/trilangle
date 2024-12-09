@@ -10,93 +10,46 @@ description: The dictionary for words in the Trilangle Vocabulary Extension.
 
   <p>Words are grouped by their semantic family and their heading is the word with the lowest arity. For example, <i>ᑯᐃ love</i> and <i>ᑯᐃᕑ to love</i> share a family, and its heading is <i>ᑯᐃ</i> because it is 1-place whereas ᑯᐃᕑ is 3-place. Words prefixed with an asterisk * is either debated or nonexistent and should not be used in practice.</p>
 
-  <article>
-    <h3>ᐁᐅᐃᐊ - Trilangle</h3>
-    <ol>
-      <li><b>ᐁᐅᐃᐊ /eoia/</b> - trilangle(x); x is Trilangle.</li>
-      <li><b>ᐁᐅᐃᐊᒾ /eoiam/</b> - use.trilangle(e, x); e is an event of x using Trilangle</li>
-      <li><b>ᐁᐅᐃᐊᕑ /eoiar/</b> - trilangle(e, x, y); e is an event of x describing y with Trilangle. Alternatively, e is an event of x is Trilangling y.</li>
-    </ol>
-  </article>
+  {% assign dictionary = site.data.vocabulary | sort: "gloss" %}
+  {% for word in dictionary %}
+    <article>
+      <h3><tri-vocab>{{ word.stem }}</tri-vocab> - {{ word.gloss }}</h3>
+      <ol>
+        {% if word.one %}
+        <li>
+          <b>
+            <tri-vocab>{{ word.stem }}</tri-vocab>
+            /{{ word.stem | remove: " " }}/
+          </b> - {{ word.one }}
+        </li>
+        {% else %}
+          <li class="text-muted">No one-place form</li>
+        {% endif %}
 
-  <article>
-    <h3>ᐁᐨᗕ - sun</h3>
-    <ol>
-      <li><b>ᐁᐨᗕ /etswa/</b> - sun(x); x is a sun.</li>
-      <li><b>ᐁᐨᗕᒾ /etswam/</b> - sun(e, x); e is an event of x being a sun.</li>
-      <li class="text-muted"><b>*ᐁᐨᗕᕑ /etswar/</b> - *sun(e, x, y); ???.</li>
-    </ol>
-  </article>
+        {% if word.two %}
+        <li>
+          <b>
+            <tri-vocab>{{ word.stem }} m</tri-vocab>
+            /{{ word.stem | remove: " " }}m/
+          </b> - {{ word.two }}
+        </li>
+        {% else %}
+          <li class="text-muted">No two-place form</li>
+        {% endif %}
 
-  <article>
-    <h3>ᐃᒥ - me</h3>
-    <ol>
-      <li><b>ᐃᒥ /imi/</b> - me(x); x is me.</li>
-      <li><b>ᐃᒥᒾ /imim/</b> - me(e, x); e is an event of x being me.</li>
-      <li class="text-muted"><b>*ᐃᒥᕑ /imir/</b> - *me(e, x, y); ???</li>
-    </ol>
-  </article>
+        {% if word.three %}
+          <li>
+            <b>
+              <tri-vocab>{{ word.stem }} r</tri-vocab>
+              /{{ word.stem | remove: " " }}r/
+            </b> - {{ word.three }}
+          </li>
+        {% else %}
+          <li class="text-muted">No three-place form</li>
+        {% endif %}
+      </ol>
+    </article>
+  {% endfor %}
 
-  <article>
-    <h3>ᐃᔭ - you</h3>
-    <ol>
-      <li><b>ᐃᔭ /ija/</b> - you(x); x is you.</li>
-      <li><b>ᐃᔭᒾ /ijam/</b> - you(e, x); e is an event of x being you.</li>
-      <li class="text-muted"><b>*ᐃᔭᕑ /ijar/</b> - *you(e, x, y); ???</li>
-    </ol>
-  </article>
-
-  <article>
-    <h3>ᐃᓴᗒ - greeting</h3>
-    <ol>
-      <li><b>ᐃᓴᗒ /isawo/</b> - greeting(x); x is a greeting.</li>
-      <li><b>ᐃᓴᗒᒾ /isawom/</b> - greet(e, x); e is an event of x being a greeting.</li>
-      <li><b>ᑯᐃᕑ /isawor/</b> - greet(e, x, y); e is an event of x greeting y.</li>
-    </ol>
-  </article>
-
-  <article>
-    <h3>ᑯᐃ - love</h3>
-    <ol>
-      <li><b>ᑯᐃ /koi/</b> - love(x); x is (the concept of) love.</li>
-      <li><b>ᑯᐃᒾ /koim/</b> - love(e, x); e is an event of x being (the concept of) love.</li>
-      <li><b>ᑯᐃᕑ /koir/</b> - love(e, x, y); e is an event of x loving y.</li>
-    </ol>
-  </article>
-
-  <article>
-    <h3>ᒪᒪ - mother</h3>
-    <ol>
-      <li><b>ᒪᒪ /mama/</b> - mother(x); x is the concept of a mother.</li>
-      <li><b>ᒪᒪᒾ /mamam/</b> - mother(x); e is an event of x being the concept of a mother.</li>
-      <li><b>ᒪᒪᕑ /mamar/</b> - mother(e, x, y); e is an event of x being y's mother.</li>
-    </ol>
-  </article>
-
-  <article>
-    <h3>ᓴᒧ - use</h3>
-    <ol>
-      <li><b>ᓴᒧ /samo/</b> - use(x); x is (the concept of) using.</li>
-      <li><b>ᓴᒧᒾ /samom/</b> - use(e, x); e is an event of x being (the concept of) using.</li>
-      <li><b>ᓴᒧᕑ /samor/</b> - use(e, x, y); e is an event of x using y.</li>
-    </ol>
-  </article>
-
-  <article>
-    <h3>ᒋᐣᗧ - dry</h3>
-    <ol>
-      <li><b>ᒋᐣᗧ /tsinta/</b> - dry(x); x is dry.</li>
-      <li><b>ᒋᐣᗧᒾ /tsintam/</b> - dry(e, x); e is an event of x being dry.</li>
-      <li><b>ᒋᐣᗧᕑ /tsintar/</b> - dry(e, x, y); e is an event of x drying y.</li>
-    </ol>
-  </article>
-  
-  <article>
-    <h3>ᗢᔦ - clothes</h3>
-    <ol>
-      <li><b>ᗢᔦ /tʼeje/</b> - clothes(x); x is clothes.</li>
-      <li><b>ᗢᔦᒾ /tʼejem/</b> - clothes(x); e is an event of x being clothes.</li>
-      <li><b>ᗢᔦᕑ /tʼejer/</b> - clothes(e, x, y); e is an event of x clothing y. Alternatively, e is an event of x being the clothes worn by y.</li>
-    </ol>
-  </article>
+  <script type="module" src="/assets/js/tri-vocab-element.js"></script>
 </main>

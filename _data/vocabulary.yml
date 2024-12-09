@@ -1,0 +1,57 @@
+- gloss: Trilangle
+  stem: e o i a
+  one: trilangle(x); x is Trilangle.
+  two: use.trilangle(e, x); e is an event of x using Trilangle.
+  three: trilangle(e, x, y); e is an event of x describing y with Trilangle. Alternatively, e is an event of x is Trilangling y.
+
+- gloss: sun
+  stem: e ts wa
+  one: sun(x); x is a sun.
+  two: sun(e, x); e is an event of x being a sun.
+  three: sun(e, x, y); e is an event of x being the sun of y. (Implies that y orbits x).
+
+- gloss: me
+  stem: i mi
+  one: me(x); x is me.
+  two: me(e, x); e is an event of x being me.
+
+- gloss: you
+  stem: i mi
+  one: me(x); x is you.
+  two: me(e, x); e is an event of x being you.
+
+- gloss: greeting
+  stem: i sa wo
+  one: greeting(x); x is a greeting.
+  two: greeting(e, x); e is an event of x being a greeting.
+  three: greet(e, x); e is an event of x greeting y.
+
+- gloss: love
+  stem: ko i
+  one: love(x); x is the concept of love.
+  two: love(e, x); e is an event of x being (the concept or an instance of) love.
+  three: love(e, x, y); e is an event of x loving y.
+
+- gloss: mother
+  stem: ma ma
+  one: mother(x); x is the concept of a mother.
+  two: mother(e, x); e is an event of x being the concept of a mother.
+  three: mother(e, x, y); e is an event of x being y's mother.
+
+- gloss: use
+  stem: sa mo
+  one: use(x); x is the concept of usage.
+  two: use(e, x); e is an event of x being (the concept) of usage.
+  three: use(e, x, y); e is an event of x using y.
+
+- gloss: dry
+  stem: tsi n ta
+  one: dry(x); x is dry.
+  two: dry(e, x); e is an event of x being dry.
+  three: dry(e, x, y); e is an event of x drying y.
+
+- gloss: clothes
+  stem: tʼe je
+  one: clothes(x); x is clothes.
+  two: clothes(e, x); e is an event of x being clothes.
+  three: use(e, x, y); e is an event of x drying y.
