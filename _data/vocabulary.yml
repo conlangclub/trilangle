@@ -28,20 +28,14 @@
 
 - gloss: love
   stem: ko i
-  one: love(x); x is the concept of love.
-  two: love(e, x); e is an event of x being (the concept or an instance of) love.
   three: love(e, x, y); e is an event of x loving y.
 
 - gloss: mother
   stem: ma ma
-  one: mother(x); x is the concept of a mother.
-  two: mother(e, x); e is an event of x being the concept of a mother.
   three: mother(e, x, y); e is an event of x being y's mother.
 
 - gloss: use
   stem: sa mo
-  one: use(x); x is the concept of usage.
-  two: use(e, x); e is an event of x being (the concept) of usage.
   three: use(e, x, y); e is an event of x using y.
 
 - gloss: dry
@@ -54,3 +48,93 @@
   stem: tʼe je
   one: clothes(x); x is clothes.
   two: clothes(e, x); e is an event of x being clothes.
+
+- gloss: speak
+  stem: tse ti k
+  three: speak(e, x, y); e is an event of x speaking y.
+
+- gloss: after
+  stem: i ti
+  three: after(e, x, y); e is an event of x being after y.
+
+- gloss: go away
+  stem: a no t 
+  three: go.away(e, x, y); e is an event of x going away from y.
+
+- gloss: person
+  stem: ki n we
+  one: person(x); x is a person.
+  two: person(e, x); e is an event of x being a person.
+
+- gloss: see
+  stem: o ta jo
+  three: see(e, x, y); e is an event of x seeing y.
+
+- gloss: plunge
+  stem: ta e te
+  three: plunge(e, x, y); e is an event of x plunging y.
+
+- gloss: in
+  stem: o i
+  three: in(e, x, y); e is an event of x being in y.
+
+- gloss: story
+  stem: tse ta n
+  one: story(x); x is a story.
+  two: story(e, x); e is an event of x being a story.
+  three: story(e, x, y); e is an event of x being a story about y.
+
+- gloss: understand
+  stem: i a ne
+  three: understand(e, x, y); e is an event of x understanding y.
+
+- gloss: away
+  stem: e ne t
+  three: away(e, x, y); e is an event of x being away from y.
+
+- gloss: flow
+  stem: wi ta
+  one: flow(x); x is a flow.
+  two: flow(e, x); e is an event of x flowing.
+
+- gloss: event
+  stem: se tsa m
+  one: event(x); x is an event.
+  two: event(e, x); e in an event of x being an event.
+
+- gloss: allow
+  stem: to a o
+  three: allow(e, x, y); e is an event of x allowing y.
+
+- gloss: alone
+  stem: e we kaj
+  one: alone(x); x is alone.
+  two: alone(e, x); e is an event of x being alone.
+
+- gloss: live
+  stem: as tsi
+  one: live(x); x lives.
+  two: live(e, x); e is an event of x living.
+  three: live(e, x, y); e is an event of x living through something (e.g. a period of time).
+
+- gloss: friend
+  stem: o ka we
+  three: friend(e, x, y); e is an event of x being a friend of y.
+
+- gloss: disappear
+  stem: wes kis
+  two: disappear(e, x); e is an event of x disappearing.
+  three: disappear(e, x, y); e is an event of x disappearing from y.
+
+- gloss: know
+  stem: ji tie
+  three: know(e, x, y); e is an event of x knowing y.
+
+- gloss: terrible
+  stem: a a ko
+  one: terrible(x); x is terrible.
+  two: terrible(e, x); e is an event of x being terrible.
+
+- gloss: witness
+  stem: tsa ta k
+  three: witness(e, x, y); e is an event of x witnessing y.
