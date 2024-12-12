@@ -50,7 +50,7 @@
   two: clothes(e, x); e is an event of x being clothes.
 
 - gloss: speak
-  stem: tse ti k
+  stem: tse ti
   three: speak(e, x, y); e is an event of x speaking y.
 
 - gloss: after
@@ -58,7 +58,7 @@
   three: after(e, x, y); e is an event of x being after y.
 
 - gloss: go away
-  stem: a no t 
+  stem: a no
   three: go.away(e, x, y); e is an event of x going away from y.
 
 - gloss: person
@@ -79,7 +79,7 @@
   three: in(e, x, y); e is an event of x being in y.
 
 - gloss: story
-  stem: tse ta n
+  stem: tse ta ne
   one: story(x); x is a story.
   two: story(e, x); e is an event of x being a story.
   three: story(e, x, y); e is an event of x being a story about y.
@@ -89,7 +89,7 @@
   three: understand(e, x, y); e is an event of x understanding y.
 
 - gloss: away
-  stem: e ne t
+  stem: e ne te
   three: away(e, x, y); e is an event of x being away from y.
 
 - gloss: flow
@@ -98,7 +98,7 @@
   two: flow(e, x); e is an event of x flowing.
 
 - gloss: event
-  stem: se tsa m
+  stem: se tsa
   one: event(x); x is an event.
   two: event(e, x); e in an event of x being an event.
 
@@ -107,7 +107,7 @@
   three: allow(e, x, y); e is an event of x allowing y.
 
 - gloss: alone
-  stem: e we kaj
+  stem: e we ka
   one: alone(x); x is alone.
   two: alone(e, x); e is an event of x being alone.
 
@@ -122,7 +122,7 @@
   three: friend(e, x, y); e is an event of x being a friend of y.
 
 - gloss: disappear
-  stem: wes kis
+  stem: wes ki sa
   two: disappear(e, x); e is an event of x disappearing.
   three: disappear(e, x, y); e is an event of x disappearing from y.
 
@@ -136,5 +136,5 @@
   two: terrible(e, x); e is an event of x being terrible.
 
 - gloss: witness
-  stem: tsa ta k
+  stem: tsa ta ka
   three: witness(e, x, y); e is an event of x witnessing y.
