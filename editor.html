@@ -3,9 +3,6 @@ title: Editor
 layout: default
 description: A basic editor to turn Trilangle Description JSON into a Trilangle sentence.
 ---
-<script type="module" src="/assets/js/render-trilangle.js"></script>
-<script type="module" src="/assets/js/editor.js" defer></script>
-
 <main class="container">
   <section class="row">
     <h2>Editor</h2>
@@ -15,19 +12,76 @@ description: A basic editor to turn Trilangle Description JSON into a Trilangle 
     <section id="preview" class="col d-flex justify-content-center align-items-center">
       <div id="section"></div>
     </section>
-    <section class="col d-flex">
-      <textarea name="input" id="input" style="flex: 1" class="font-monospace small" rows="20">
+    <section class="col d-flex flex-column" id="fancy-editor"></section>
+  </section>
+
+  <section class="row">
+    <textarea name="input" id="input" style="flex: 1" class="font-monospace small" rows="20">
 [
-  {"word": "artlang", "color": "blue", "level": 0, "dot": 0, "triangles": [[0,0,1]]},
-  {"word": "engineer", "color": "blue", "level": 0, "dot": 0, "triangles": [[-1,1,1]]},
-  {"word": "Trilangle", "color": "red", "level": 0, "triangles": [[0,1,0]]},
-  {"word": "write", "color": "blue", "level": 0, "dot": 2, "triangles": [[0,1,1]]},
-  {"word": "use", "color": "blue", "level": 0, "dot": 0, "triangles": [[1,2,0]]},
-  {"word": "triangle", "color": "red", "level": 0, "dot": 0, "triangles": [[0,2,1]]},
-  {"word": "colorful", "color": "blue", "level": 0, "dot": 1, "triangles": [[0,2,0]]},
-  {"word": "tesselate", "color": "blue", "level": 0, "dot": 0, "triangles": [[0,3,0]]}
+{"word": "artlang", "color": "blue", "level": 0, "dot": 0, "triangles": [[0,0,1]]},
+{"word": "engineer", "color": "blue", "level": 0, "dot": 0, "triangles": [[-1,1,1]]},
+{"word": "Trilangle", "color": "red", "level": 0, "triangles": [[0,1,0]]},
+{"word": "write", "color": "blue", "level": 0, "dot": 2, "triangles": [[0,1,1]]},
+{"word": "use", "color": "blue", "level": 0, "dot": 0, "triangles": [[1,2,0]]},
+{"word": "triangle", "color": "red", "level": 0, "dot": 0, "triangles": [[0,2,1]]},
+{"word": "colorful", "color": "blue", "level": 0, "dot": 1, "triangles": [[0,2,0]]},
+{"word": "tesselate", "color": "blue", "level": 0, "dot": 0, "triangles": [[0,3,0]]}
 ]
-      </textarea>
-    </section>
+    </textarea>
   </section>
 </main>
+
+<template id="editor-triangle">
+  <div>
+    <div class="editor-word">
+      <label>Word</label>
+      <input type="text" />
+    </div>
+    
+    <div class="editor-color">
+      <label>Color</label>
+      <select>
+        <option value="blue">Blue</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+      </select>
+    </div>
+    
+    <div class="editor-level">
+      <label>Level</label>
+      <input type="number" min="0" max="10" />
+    </div>
+    
+    <div class="editor-dot">
+      <label>Dot</label>
+      <input type="number" min="0" max="2" />
+    </div>
+    
+    <div class="editor-subtriangle-list">
+      <label>Triangles</label>
+      <ul></ul>
+    </div>
+  </div>
+</template>
+
+<template id="editor-subtriangle">
+  <li>
+    <div class="editor-q">
+      <label>q</label>
+      <input type="number" />
+    </div>
+
+    <div class="editor-r">
+      <label>r</label>
+      <input type="number" />
+    </div>
+
+    <div class="editor-u">
+      <label>u</label>
+      <input type="number" />
+    </div>
+  </li>
+</template>
+
+<script type="module" src="/assets/js/render-trilangle.js"></script>
+<script type="module" src="/assets/js/editor.js" defer></script>
