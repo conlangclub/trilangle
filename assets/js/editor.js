@@ -8,11 +8,14 @@ const editorSubtriangle = document.getElementById("editor-subtriangle");
 let trilangleCode = input.value;
 
 input.addEventListener("input", () => {
+  updateEverything();
+});
+updateEverything();
+
+function updateEverything() {
   render(trilangleCode);
   updateEditor(trilangleCode);
-});
-render(trilangleCode);
-updateEditor(trilangleCode);
+}
 
 function render(code) {
   let template = document.createElement("template");
@@ -32,12 +35,12 @@ function updateEditor(code) {
   for (let [triangleNbr, triangle] of sentence.entries()) {
     const triangleElem = editorTriangle.content.cloneNode(true);
 
-    updateEditorField(triangleElem, triangleNbr, 'word', triangle.word);
-    updateEditorField(triangleElem, triangleNbr, 'color', triangle.color);
-    updateEditorField(triangleElem, triangleNbr, 'level', triangle.level);
+    updateEditorField(sentence, triangleElem, triangleNbr, 'word');
+    updateEditorField(sentence, triangleElem, triangleNbr, 'color');
+    updateEditorField(sentence, triangleElem, triangleNbr, 'level');
 
     if (triangle.color === 'blue') {
-      updateEditorField(triangleElem, triangleNbr, 'dot', triangle.dot);
+      updateEditorField(sentence, triangleElem, triangleNbr, 'dot');
     } else {
       const dot = triangleElem.querySelector('.editor-dot');
       dot.style.display = 'none';
@@ -47,11 +50,17 @@ function updateEditor(code) {
   }
 }
 
-function updateEditorField(triangleElem, triangleNbr, fieldName, value) {
+function updateEditorField(sentence, triangleElem, triangleNbr, fieldName) {
   const [label, input] = triangleElem.querySelector(`.editor-${fieldName}`).children;
   label.setAttribute('for', `${fieldName}-${triangleNbr}`);
   input.setAttribute('name', `${fieldName}-${triangleNbr}`);
-  input.value = value;
+  input.value = sentence[triangleNbr][fieldName];
+
+  input.addEventListener('change', (e) => {
+    sentence[triangleNbr][fieldName] = (input.type === 'number') ? e.target.valueAsNumber : e.target.value;
+    trilangleCode = JSON.stringify(sentence);
+    updateEverything();
+  });
 }
 
 input.addEventListener('keydown', function(e) {
