@@ -9,10 +9,10 @@ description: A basic editor to turn Trilangle Description JSON into a Trilangle 
     <p class="lead">A basic editor to turn Trilangle Description JSON into a Trilangle sentence. The sentence will update based on the code on the right.</p>
   </section>
   <section class="row">
-    <section id="preview" class="col d-flex justify-content-center align-items-center">
+    <section id="preview" class="col d-flex justify-content-center">
       <div id="section"></div>
     </section>
-    <section class="col d-flex flex-column" id="fancy-editor"></section>
+    <section class="col d-flex flex-column gap-3" id="fancy-editor"></section>
   </section>
 
   <section class="row">
@@ -32,40 +32,47 @@ description: A basic editor to turn Trilangle Description JSON into a Trilangle 
 </main>
 
 <template id="editor-triangle">
-  <div class="d-flex">
-    <div class="editor-word">
-      <label>Word</label>
-      <input type="text" />
-    </div>
-    
-    <div class="editor-color">
-      <label>Color</label>
-      <select>
-        <option value="blue">Blue</option>
-        <option value="red">Red</option>
-        <option value="green">Green</option>
-      </select>
-    </div>
-    
-    <div class="editor-level">
-      <label>Level</label>
-      <input type="number" min="0" max="10" />
-    </div>
-    
-    <div class="editor-dot">
-      <label>Dot</label>
-      <input type="number" min="0" max="2" />
+  <div class="small border p-3">
+    <div class="d-flex gap-1">
+      <button class="editor-triangle-del">X</button>
+
+      <div class="editor-word">
+        <label>Word</label>
+        <input type="text" />
+      </div>
+      
+      <div class="editor-color">
+        <label>Color</label>
+        <select>
+          <option value="blue">Blue</option>
+          <option value="red">Red</option>
+          <option value="green">Green</option>
+        </select>
+      </div>
+      
+      <div class="editor-level">
+        <label>Level</label>
+        <input type="number" min="0" max="10" />
+      </div>
+      
+      <div class="editor-dot">
+        <label>Dot</label>
+        <input type="number" min="0" max="2" />
+      </div>
     </div>
     
     <div class="editor-subtriangle-list">
       <label>Triangles</label>
       <ul></ul>
+      <button>Add</button>
     </div>
   </div>
 </template>
 
 <template id="editor-subtriangle">
-  <li>
+  <li class="d-flex">
+    <button class="editor-subtriangle-del">X</button>
+
     <div class="editor-0">
       <label>q</label>
       <input type="number" />
@@ -78,7 +85,7 @@ description: A basic editor to turn Trilangle Description JSON into a Trilangle 
 
     <div class="editor-2">
       <label>u</label>
-      <input type="number" />
+      <input type="number" min="0", max="1" />
     </div>
   </li>
 </template>
