@@ -14,6 +14,17 @@ input.addEventListener("input", () => {
 });
 updateEverything();
 
+addTriangleBtn.addEventListener("click", addTriangle);
+
+function addTriangle() {
+  trilangleCode = input.value;
+  const sentence = JSON.parse(trilangleCode);
+  const lastTriangle = sentence[sentence.length - 1];
+  sentence.push(structuredClone(lastTriangle));
+  trilangleCode = JSON.stringify(sentence);
+  updateEverything();
+}
+
 function updateEverything() {
   input.value = trilangleCode;
   render(trilangleCode);
@@ -34,8 +45,6 @@ function render(code) {
 function updateEditor(code) {
   const sentence = JSON.parse(code);
   editor.innerHTML = '';
-
-  addTriangleBtn.addEventListener("click", () => addTriangle(sentence));
 
   for (let [triangleNbr, triangle] of sentence.entries()) {
     const triangleElem = editorTriangle.content.cloneNode(true);
@@ -62,12 +71,6 @@ function updateEditor(code) {
   }
 }
 
-function addTriangle(sentence) {
-  const lastTriangle = sentence[sentence.length - 1];
-  sentence.push(structuredClone(lastTriangle));
-  trilangleCode = JSON.stringify(sentence);
-  updateEverything();
-}
 
 function updateEditorField(sentence, triangleElem, triangleNbr, fieldName) {
   const [label, input] = triangleElem.querySelector(`.editor-${fieldName}`).children;
