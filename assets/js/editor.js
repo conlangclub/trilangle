@@ -8,11 +8,13 @@ const editorSubtriangle = document.getElementById("editor-subtriangle");
 let trilangleCode = input.value;
 
 input.addEventListener("input", () => {
+  trilangleCode = input.value;
   updateEverything();
 });
 updateEverything();
 
 function updateEverything() {
+  input.value = trilangleCode;
   render(trilangleCode);
   updateEditor(trilangleCode);
 }

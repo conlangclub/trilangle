@@ -12,7 +12,10 @@ description: A basic editor to turn Trilangle Description JSON into a Trilangle 
     <section id="preview" class="col d-flex justify-content-center">
       <div id="section"></div>
     </section>
-    <section class="col d-flex flex-column gap-3" id="fancy-editor"></section>
+    <section class="col d-flex flex-column" style="height: 50rem">
+      <header class="text-end mb-3"><button id="editor-add-word">Add word</button></header>
+      <main id="fancy-editor" class="col d-flex flex-column gap-3 overflow-scroll"></main>
+    </section>
   </section>
 
   <section class="row">
@@ -32,7 +35,7 @@ description: A basic editor to turn Trilangle Description JSON into a Trilangle 
 </main>
 
 <template id="editor-triangle">
-  <div class="small border p-3">
+  <div class="small border p-3 card">
     <div class="d-flex gap-1">
       <button class="editor-triangle-del">X</button>
 
@@ -62,30 +65,30 @@ description: A basic editor to turn Trilangle Description JSON into a Trilangle 
     </div>
     
     <div class="editor-subtriangle-list">
-      <label>Triangles</label>
-      <ul></ul>
-      <button>Add</button>
+      <header class="h5">Subtriangles</header>
+      <ul class="list-group"></ul>
+      <div class="text-center mt-3"><button class="editor-add-subtriangle">Add subtriangle</button></div>
     </div>
   </div>
 </template>
 
 <template id="editor-subtriangle">
-  <li class="d-flex">
-    <button class="editor-subtriangle-del">X</button>
+  <li class="d-flex list-group-item">
+    <button class="editor-subtriangle-del me-2">X</button>
 
-    <div class="editor-0">
+    <div class="editor-0 me-2">
       <label>q</label>
-      <input type="number" />
+      <input type="number"/>
     </div>
 
-    <div class="editor-1">
+    <div class="editor-1 me-2">
       <label>r</label>
-      <input type="number" />
+      <input type="number"/>
     </div>
 
-    <div class="editor-2">
+    <div class="editor-2 me-2">
       <label>u</label>
-      <input type="number" min="0", max="1" />
+      <input type="number" min="0", max="1"/>
     </div>
   </li>
 </template>

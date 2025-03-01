@@ -1,0 +1,35 @@
+.editor-subtriangle-del, .editor-triangle-del {
+  @extend .btn, .btn-danger, .btn-sm;
+}
+
+.editor-add-subtriangle {
+  @extend .btn, .btn-outline-primary, .btn-sm;
+}
+
+#editor-add-word {
+  @extend .btn, .btn-primary;
+}
+
+.editor-0, .editor-1, .editor-2,
+.editor-word, .editor-color, .editor-level, .editor-dot {
+  @extend .me-3;
+
+  display: flex;
+  align-items: center;
+
+  & > label {
+    @extend .me-2;
+  }
+
+  & > input {
+    @extend .form-control;
+  }
+
+  & > select {
+    @extend .form-select;
+  }
+}
+
+.editor-subtriangle-list {
+  @extend .mt-3;
+}
