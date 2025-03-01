@@ -2,11 +2,11 @@
   @extend .btn, .btn-danger, .btn-sm;
 }
 
-.editor-add-subtriangle {
+.editor-subtriangle-add {
   @extend .btn, .btn-outline-primary, .btn-sm;
 }
 
-#editor-add-word {
+#editor-triangle-add {
   @extend .btn, .btn-primary;
 }
 

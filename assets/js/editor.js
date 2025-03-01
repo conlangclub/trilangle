@@ -4,6 +4,7 @@ const preview = document.getElementById("preview");
 const editor = document.getElementById("fancy-editor");
 const editorTriangle = document.getElementById("editor-triangle");
 const editorSubtriangle = document.getElementById("editor-subtriangle");
+const addTriangleBtn = document.getElementById("editor-triangle-add");
 
 let trilangleCode = input.value;
 
@@ -34,6 +35,8 @@ function updateEditor(code) {
   const sentence = JSON.parse(code);
   editor.innerHTML = '';
 
+  addTriangleBtn.addEventListener("click", () => addTriangle(sentence));
+
   for (let [triangleNbr, triangle] of sentence.entries()) {
     const triangleElem = editorTriangle.content.cloneNode(true);
 
@@ -57,6 +60,13 @@ function updateEditor(code) {
 
     editor.appendChild(triangleElem);
   }
+}
+
+function addTriangle(sentence) {
+  const lastTriangle = sentence[sentence.length - 1];
+  sentence.push(structuredClone(lastTriangle));
+  trilangleCode = JSON.stringify(sentence);
+  updateEverything();
 }
 
 function updateEditorField(sentence, triangleElem, triangleNbr, fieldName) {
