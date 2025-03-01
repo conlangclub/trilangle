@@ -43,7 +43,7 @@ description: A basic editor to turn Trilangle Description JSON into a Trilangle 
 
 <template id="editor-triangle">
   <div class="small border p-3 card">
-    <div class="d-flex gap-1">
+    <div class="d-flex flex-wrap gap-1">
       <button class="editor-triangle-del">X</button>
 
       <div class="editor-word">
@@ -68,6 +68,15 @@ description: A basic editor to turn Trilangle Description JSON into a Trilangle 
       <div class="editor-dot">
         <label>Dot</label>
         <input type="number" min="0" max="2" />
+      </div>
+
+      <div class="editor-polarity">
+        <label>Polarity</label>
+        <select>
+          <option value="pos">Positive</option>
+          <option value="unk">Unknown</option>
+          <option value="neg">Negative</option>
+        </select>
       </div>
     </div>
     

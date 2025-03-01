@@ -53,6 +53,7 @@ function updateEditor(code) {
     updateEditorField(sentence, triangleElem, triangleNbr, 'color');
     updateEditorField(sentence, triangleElem, triangleNbr, 'level');
     updateEditorField(sentence, triangleElem, triangleNbr, 'dot');
+    updateEditorField(sentence, triangleElem, triangleNbr, 'polarity');
 
     if (triangle.color !== 'blue') {
       const dot = triangleElem.querySelector('.editor-dot');
