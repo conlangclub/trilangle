@@ -128,6 +128,73 @@ description: A more-in depth guide to how Blues work in Trilangle.
 
   </section>
 
+  <section>
+    <h3>Adverbial modification</h3>
+    <p class="lead">The event variable from a Blue can be used as an argument of another Blue to do adverb-like modification.</p>
+
+    <figure class="trilangle-gloss">
+      <div class="trilangle">
+        <trilangle-sentence>
+          <template>
+            [
+              {"word":"quick","color":"blue","level":0,"dot":0,"triangles":[[0,0,1]]},
+              {"word":"run","color":"blue","level":0,"triangles":[[0,1,0]],"dot":2},
+              {"word":"mouse","color":"red","level":0,"triangles":[[-1,1,1]],"dot":2}
+            ]
+          </template>
+        </trilangle-sentence>
+      </div>
+      <div>
+        <dl>
+          <dt>Idiomatic translation</dt>
+          <dd>A mouse runs quickly.</dd>
+
+          <dt>Literal translation</dt>
+          <dd>
+            There exists a thing x such that x is a mouse,<br>
+            and there exists an event e of x running,<br>
+            and there exists an event f of e being quick.
+          </dd>
+
+          <dt>Formal semantics</dt>
+          <dd>∃x mouse(x) & ∃e run(e, x) & ∃f quick(f, e)</dd>
+        </dl>
+      </div>
+    </figure>
+
+    <p class="lead">Using Blues like <i>in, to,</i> and <i>with</i>, you can represent sentences that would otherwise be represented as ditransitives in other languages.</p>
+
+    <figure class="trilangle-gloss">
+      <div class="trilangle">
+        <trilangle-sentence>
+          <template>
+            [{"word":"to","color":"blue","level":0,"dot":0,"triangles":[[0,0,1]]},{"word":"give","color":"blue","level":0,"triangles":[[0,1,0]],"dot":2},{"word":"Santa","color":"red","level":0,"triangles":[[-1,1,1]],"dot":2},{"word":"child","color":"red","level":0,"triangles":[[1,0,0]],"dot":2},{"word":"present","color":"red","level":0,"triangles":[[0,1,1]],"dot":2}]
+          </template>
+        </trilangle-sentence>
+      </div>
+      <div>
+        <dl>
+          <dt>Idiomatic translation</dt>
+          <dd>Santa gives a child a present.</dd>
+
+          <dt>Literal translation</dt>
+          <dd>
+            There exists a thing x such that x is Santa,<br>
+            There exists a thing y such that y is a child,<br>
+            There exists a thing z such that z is a present,<br>
+            and there exists an event e of x giving z,<br>
+            and there exists an event f of e being to y.
+          </dd>
+
+          <dt>Formal semantics</dt>
+          <dd>∃x Santa(x) & ∃y child(y) & ∃z present(z) & ∃e give(e, x, z) & ∃f to(f, e, y)</dd>
+        </dl>
+      </div>
+    </figure>
+
+
+  </section>
+
   <nav class="paginator-bottom">
     <a href="/guide/basics.html" class="prev">Prev page: The basics</a>
     <a href="/guide/reds.html" class="next">Next page: The Reds</a>
