@@ -95,10 +95,33 @@ description: An introduction and guide to Greens in Trilangle.
 
     <p class="lead">Since the word inside the Green is the name of the Green's variable and not a predicate, you can use a Green with the same word elsewhere in the sentence and still be talking about the same set.</p>
 
-    <div class="alert alert-warning">
-      <img src="/assets/images/under-construction.png" role="presentation">
-      This section is missing an example!
-    </div>
+    <figure class="trilangle-gloss">
+      <div class="trilangle">
+        <trilangle-sentence>
+          <template>[{"word":"cat","color":"red","level":0,"dot":0,"triangles":[[0,0,1]]},{"word":"chase","color":"blue","level":0,"dot":2,"triangles":[[1,0,0]]},{"word":"tail","color":"red","level":0,"dot":2,"triangles":[[1,0,1]]},{"word":"T","color":"green","level":0,"dot":2,"triangles":[[2,0,0]]},{"word":"have","color":"blue","level":0,"dot":0,"triangles":[[0,1,0]]},{"word":"T","color":"green","level":0,"dot":0,"triangles":[[-1,1,1]]}]</template>
+        </trilangle-sentence>
+      </div>
+      <div>
+        <dl>
+          <dt>Idiomatic translation</dt>
+          <dd>The cat chases the tail it has.</dd>
+
+          <dt>Literal translation</dt>
+          <dd>
+            There exists a thing x such that x is a cat,<br>
+            and there exists a thing y such that y is a tail,<br>
+            and there exists a set T such that y is a subset of T,<br>
+            and there exists an event e of x chasing y,<br>
+            and there exists an event f of x having T.
+          </dd>
+
+          <dt>Formal semantics</dt>
+          <dd>∃x cat(x) & ∃y tail(y) & ∃T y ⊆ T & ∃e chase(x, y) & ∃e have(x, T)</dd>
+        </dl>
+      </div>
+    </figure>    
+
+
   </section>
 
   <section>
