@@ -32,10 +32,14 @@ description: A more-in depth guide to how Blues work in Trilangle.
           <dd>A cat is sleeping.</dd>
 
           <dt>Literal translation</dt>
-          <dd>There exists a thing x such that x is a cat, and there exists an event e such that e is an event of x sleeping.</dd>
+          <dd>
+            There exists a thing x and an event e,<br/>
+            such that x is a cat,<br/>
+            and e is of x sleeping.
+          </dd>
 
           <dt>Formal semantics</dt>
-          <dd>∃x cat(x) & ∃e sleep(e, x)</dd>
+          <dd>∃x ∃e cat(x) & sleep(e, x)</dd>
         </dl>
       </div>
     </figure>
@@ -78,13 +82,14 @@ description: A more-in depth guide to how Blues work in Trilangle.
 
           <dt>Literal translation</dt>
           <dd>
-            There exists a thing x such that x is a monkey,<br>
-            and there exists a thing y such that y is an action<br>
-            and there exists an event e such that e is an event of x seeing y.
+            There exists things x and y, and an event e,<br>
+            such that x is a monkey,<br>
+            y is an action,<br>
+            and e is an event of x seeing y.
           </dd>
 
           <dt>Formal semantics</dt>
-          <dd>∃x monkey(x) & ∃y action(y) & ∃e see(e, x, y)</dd>
+          <dd>∃x ∃y ∃e monkey(x) & action(y) & see(e, x, y)</dd>
         </dl>
       </div>
     </figure>
@@ -114,12 +119,13 @@ description: A more-in depth guide to how Blues work in Trilangle.
 
           <dt>Literal translation</dt>
           <dd>
-            There exists a thing x such that x is a banana,<br>
-            and there exists an event e such that e is an event of ⬚ eating y.
+            There exists a thing x and an event e,<br/>
+            such that x is a banana,<br/>
+            and e is of ⬚ eating x.
           </dd>
 
           <dt>Formal semantics</dt>
-          <dd>∃x monkey(x) & ∃y action(y) & ∃e see(e, ⬚, y)</dd>
+          <dd>∃x ∃e banana(x) & eat(e, ⬚, x)</dd>
         </dl>
       </div>
     </figure>
@@ -151,13 +157,14 @@ description: A more-in depth guide to how Blues work in Trilangle.
 
           <dt>Literal translation</dt>
           <dd>
-            There exists a thing x such that x is a mouse,<br>
-            and there exists an event e of x running,<br>
-            and there exists an event f of e being quick.
+            There exists a thing x and events e and f,<br/>
+            such that x is a mouse,<br/>
+            and e is of x running,<br/>
+            and f is of e being quick.
           </dd>
 
           <dt>Formal semantics</dt>
-          <dd>∃x mouse(x) & ∃e run(e, x) & ∃f quick(f, e)</dd>
+          <dd>∃x ∃e ∃f mouse(x) & run(e, x) & quick(f, e)</dd>
         </dl>
       </div>
     </figure>
@@ -179,15 +186,16 @@ description: A more-in depth guide to how Blues work in Trilangle.
 
           <dt>Literal translation</dt>
           <dd>
-            There exists a thing x such that x is Santa,<br>
-            There exists a thing y such that y is a child,<br>
-            There exists a thing z such that z is a present,<br>
-            and there exists an event e of x giving z,<br>
-            and there exists an event f of e being to y.
+            There exists things x, y, and z, and events e and f,<br/>
+            such that x is Santa,<br/>
+            y is a child,<br/>
+            z is a present,<br/>
+            and e is of x giving z,<br/>
+            and f is of e being to y.
           </dd>
 
           <dt>Formal semantics</dt>
-          <dd>∃x Santa(x) & ∃y child(y) & ∃z present(z) & ∃e give(e, x, z) & ∃f to(f, e, y)</dd>
+          <dd>∃x ∃y ∃z ∃e ∃f Santa(x) & child(y) & present(z) & give(e, x, z) & to(f, e, y)</dd>
         </dl>
       </div>
     </figure>

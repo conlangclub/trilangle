@@ -45,10 +45,15 @@ description: An introduction and guide to Greens in Trilangle.
           <dd>There is a set of a cat and a dog.</dd>
 
           <dt>Literal translation</dt>
-          <dd>There exists a thing x such that x is a dog, and there exists a thing y such that y is a cat, and there exists a set S such that x and y are subsets of S.</dd>
+          <dd>
+            There exists things x and y, and a set S<br/>
+            such that x is a dog,<br/>
+            and y is a cat,<br/>
+            and x and y are subsets of S.
+          </dd>
 
           <dt>Formal semantics</dt>
-          <dd>∃x dog(x) & ∃y cat(y) & ∃S x, y ⊆ S</dd>
+          <dd>∃x ∃y ∃S dog(x) & cat(y) & x, y ⊆ S</dd>
         </dl>
       </div>
     </figure>
@@ -75,14 +80,15 @@ description: An introduction and guide to Greens in Trilangle.
 
           <dt>Literal translation</dt>
           <dd>
-            There exists a thing x such that x is a dog,<br>
-            and there exists a thing y such that y is a cat,<br>
-            and there exists a set S such that x and y are subsets of S,<br>
+            There exists things x and y, and a set S, and an event e,<br/>
+            such that x is a dog,<br/>
+            and y is a cat,<br/>
+            and x and y are subsets of S,<br/>
             and e is an event of S playing.
           </dd>
 
           <dt>Formal semantics</dt>
-          <dd>∃x dog(x) & ∃y cat(y) & ∃S x, y ⊆ S & ∃e play(e, S)</dd>
+          <dd>∃x ∃y ∃S ∃e dog(x) & cat(y) & x, y ⊆ S & play(e, S)</dd>
         </dl>
       </div>
     </figure>
@@ -104,15 +110,16 @@ description: An introduction and guide to Greens in Trilangle.
       <div>
         <dl>
           <dt>Idiomatic translation</dt>
-          <dd>The cat chases the tail its tail.</dd>
+          <dd>A cat chases its tail.</dd>
 
           <dt>Literal translation</dt>
           <dd>
-            There exists a thing x such that x is a cat,<br>
-            and there exists a thing y such that y is a tail,<br>
-            and there exists a set T such that y is a subset of T,<br>
-            and there exists an event e of x chasing y,<br>
-            and there exists an event f of x having T.
+            There exists things x and y, and a set T, and events e and f,<br/>
+            such that x is a cat,<br/>
+            and y is a tail,<br/>
+            and y is a subset of T,<br/>
+            and e is of x chasing y,<br/>
+            and f is of x having T.
           </dd>
 
           <dt>Formal semantics</dt>

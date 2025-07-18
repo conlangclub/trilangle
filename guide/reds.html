@@ -70,7 +70,7 @@ description: A more-in depth guide to how Reds work in Trilangle
           <dd>There exists a thing x such that x is a spoon, and there exists a thing y such that y is a fork, and x is the same thing y.</dd>
 
           <dt>Formal semantics</dt>
-          <dd>∃x ( spoon(x) & ( ∃y fork(y) ) & x = y)</dd>
+          <dd>∃x [ spoon(x) &  ∃y [ fork(y) & x = y ] ]</dd>
         </dl>
       </div>
     </figure>
@@ -102,14 +102,16 @@ description: A more-in depth guide to how Reds work in Trilangle
 
           <dt>Literal translation</dt>
           <dd>
-            There exists a thing x such that x is ice,<br>
-            and there exists a thing y such that y is water,<br>
-            and there exists an event e such that e is an event of y being solid,<br>
-            and x is the same thing as y.
+            There exists a thing x<br/>
+            such that x is ice,<br/>
+            and there exists a thing y and an event e,<br/>
+            such that y is water,<br/>
+            and e is of y being solid,<br/>
+            and x is y.
           </dd>
 
           <dt>Formal semantics</dt>
-          <dd>∃x ( ice(x) & ( ∃y water(y) & ∃e solid(e, y) ) & x = y)</dd>
+          <dd>∃x [ ice(x) & ∃y ∃e [ water(y) & solid(e, y)  & x = y ] ]</dd>
         </dl>
       </div>
     </figure>

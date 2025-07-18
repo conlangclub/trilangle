@@ -5,5 +5,8 @@ source "https://rubygems.org"
 # gem "rails"
 
 gem "json"
-gem "github-pages", "~> 228", group: :jekyll_plugins
+gem 'jekyll', '~> 4.3.3'
 gem "webrick", "~> 1.8"
+
+gem "csv", "~> 3.3"
+gem "logger", "~> 1.7"
