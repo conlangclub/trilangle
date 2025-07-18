@@ -49,24 +49,24 @@ layout: default
 
             <dt>Literal translation</dt>
             <dd>
-              There exists a thing w such that w is Dupe<br>
-              and there exists an event e of x being w's mother<br>
-              and there exists a thing x<br>
-              and there exists an event f of x drying y<br>
-              and there exists a thing y that is clothes<br>
-              and there is an event g of f using z<br>
-              and there is a thing z such that z is a sun.
+              There exists things w, x, y, and z, and events e, f, and g,<br/>
+              such that w is Dupe,<br/>
+              and e is of x being w's mother<br/>
+              and f is of x drying y<br/>
+              and y is clothes<br/>
+              and g is of f using z<br/>
+              and z is a sun.
             </dd>
 
             <dt>Formal semantics</dt>
             <dd>
-              ∃w Dupe(w)<br>
-              & ∃e mother(e, x, w)<br>
-              & ∃x<br>
-              & ∃f dry(f, x, y)<br>
-              & ∃y clothes(y)<br>
-              & ∃g use(g, f, z)<br>
-              & ∃z sun(z)
+              ∃w ∃x ∃y ∃z ∃e ∃f ∃g<br/>
+              Dupe(w)<br/>
+              & mother(e, x, w)<br/>
+              & dry(f, x, y)<br/>
+              & clothes(y)<br/>
+              & use(g, f, z)<br/>
+              & sun(z)
             </dd>
 
             <dt>Notes</dt>
